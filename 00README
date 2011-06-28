@@ -1,0 +1,152 @@
+-*- Text -*-
+
+Subject:      rail*.el ドキュメント
+Author:       しまだ みつのぶ <simm-emacs@fan.gr.jp>
+Date:         Fri, 03 Mar 2000 05:59:40 +0900
+
+
+・RAIL とは?
+
+RAIL とは Replace Agent-string Internal Library の略であり,
+以下の機能を有するものです.
+
+1.tm に含まれる genjis.el 互換機能 (変数 mule-version の日本語化)
+2.FLIM / SEMI / XEmacs / UTF-2000 Mule / Meadow のコードネームを
+  日本語化し, メッセージの User-Agent: フィールドに適用する
+3.irchat-pj で, CTCP VERSION を受けたときに返す文字のうち,
+  Mule / XEmacs / Meadow のコードネームを日本語化する
+  また, 一部バージョンの Meadow で irchat-pj を利用している場合,
+  正しくバージョンが表示できないバグを修正する
+
+・インストール方法
+
+基本的に make install するだけです. make して make install と
+してもかまいません.
+    make EMACS=mule
+等のようにすれば, (Emacs)実行ファイルを指定することができます.
+また, インストール場所を指定したい場合,
+    make LISPDIR=/home/simm/site-lisp
+等のようにすれば, 指定したパスにインストールされます.
+デフォルトの site-lisp 直下にインストールしたい場合は
+    make LISPDIR=site-lisp
+のように, site-lisp を指定ください.
+
+XEmacs のパッケージとしてインストールする場合は
+    make install-package
+としてください. インストールしたい XEmacs の実行ファイルは
+    make XEMACS=xemacs-21.2-b28 install-package
+等のようにすることで指定できます.
+一般インストールと同じく, make package してから
+make install-package をしてもかまいません.
+
+MULE のコードネームが増えることはさほどないとは思いますが,
+FLIM や SEMI は, 随時コードネームが増加しております.
+より新しいコードネームを正しく変換するためには,
+・FLIM: FLIM(およびその派生形)のソースにある VERSION を
+        contrib/FLIM_VERSION にコピー
+・SEMI: SEMI(およびその派生形)のソースにある VERSION を
+        contrib/SEMI_VERSION にコピー
+したうえで,
+  % make distclean
+  % make
+  # make install
+してください. make distclean 直後に make install しても
+かまいません. また, XEmacs パッケージとして作成する場合は
+make のかわりに make install-package します.
+
+
+・使用方法
+
+~/.emacs のどこかに
+    (require 'rail)
+と記述しておくだけです. 今まで ISO-8859-4 を使った User-Agent:
+フィールドが, 日本語表記に変更されます. また, irchat-pj の
+CTCP VERSION の結果が日本語化されます.
+
+また, rail.el は tm に含まれる genjis.el の互換機能も提供します.
+~/.emacs の, (require 'rail) の記述の手前に
+    (setq rail-emulate-genjis t)
+と書いておくことで, 変数 mule-version が日本語化されます.
+なお, rail-emulate-genjis が nil であっても, User-Agent: に含まれる
+Mule の codename は日本語表記になります.
+
+User-Agent: はそのままで, genjis 機能だけ利用したい場合は,
+    (setq rail-emulate-genjis t
+          rail-user-agent-convert-statically  nil
+          rail-user-agent-convert-dynamically nil)
+とします.
+
+irchat-pj の CTCP VERSION をいじりたくない場合は,
+    (setq rail-pj-convert nil)
+とします.
+
+コンパイル後に FLIM / SEMI / XEmacs / Meadow のバージョンを増やしたい,
+コードネームを別の表記にしたい場合等は,
+  * rail-additional-flim-codename-alist (FLIM)
+  * rail-additional-semi-codename-alist (SEMI)
+  * rail-additional-xemacs-codename-alist (XEmacs)
+  * rail-additional-meadow-codename-alist (Meadow)
+を設定してください. 設定方法は, それぞれの additional がつかない
+変数と同じですので, これらが定義されている rail-table-*.el を
+参照ください.
+
+なお, こちらで記述したものが優先されますので, デフォルトが
+気にいらない場合等, これらの変数を設定してください.
+
+
+・APEL 依存性
+
+基本的に, rail のコードは APEL に依存しておりません.
+ただ, ほとんどの場合 FLIM や SEMI のコードネーム変換に利用される
+ことでしょうから, そういう意味では APEL 依存なのかもしれません.
+
+
+・バージョン番号
+
+rail-1.2.0 のように, "." で区切られた3つの数字でバージョンを
+表しております. ふたつめの数字 (上の例だと, 2) が偶数のものが
+安定バージョン, 奇数のものが開発バージョンです.
+# どこかでみたことあるルールだなぁ… (^^;
+
+
+・今後の予定
+
+1. XEmacs や Meadow のコードネームデータベースの充実
+2. mime-view 対応
+3. SEMI 系以外の User-Agent 対応
+
+
+・意見・要望等
+
+メールで simm-emacs@fan.gr.jp までお願いします.
+なお, IRC 上でも受けつけております. 適当に見つけてください (^^;
+
+
+・なんかうまく動かないんですが…
+
+まずは, 付属の 00FAQ に目をとおしてください. もし 00FAQ にない
+ような現象が起こる場合, 上と同じく, メールで simm-emacs@fan.gr.jp
+までお願いします.
+
+私の見ていないメーリングリストでいろいろ言ってもはじまりません.
+
+
+・配布・改変について
+
+このプログラムは free software です. GNU General Public License のもとに,
+このプログラムを再配布したり改変したりしてもかまいません.
+
+This file is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2, or (at your option)
+any later version.
+
+This file is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with GNU Emacs; see the file COPYING.  If not, write to
+the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+Boston, MA 02111-1307, USA.
