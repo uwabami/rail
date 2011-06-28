@@ -1,0 +1,182 @@
+-*- Change-Log -*-
+
+rail.el(1.2.6)
+
+	Add: Meadow codenames and FLIM codenames
+
+	-- Sun,  8 Dec 2002 00:36:57 +0900
+
+rail.el(1.2.5)
+
+	Add: contrib/MEADOW_VERSION (1.13b1)
+	Bug fix: contrib/FLIM_VERSION for LIMIT-1.14.5
+
+rail.el(1.2.4)
+
+	Add: contrib/FLIM_VERSION for CHAO codename
+	Add: convert ISO-8859-1 codename (original variable) into ISO-8859-4
+
+	-- Sun, 12 Mar 2000 23:37:13 +0900
+
+rail.el(1.2.3)
+
+	Bug fix: on some cases, after installing rail-1.2.1 / 1.2.2,
+	         fail to make SEMI and User-Agent
+	Split: rail-mime-example-*.el from rail-user-agent.el
+	Add: 00FAQ (Frequently Asked Questions)
+
+	-- Fri, 03 Mar 2000 06:17:15 +0900
+
+rail.el(1.2.2)
+
+	Bug fix: rail-1.2.1 wasn't compatible with SEMI-1.13.*
+	         (thanks to Yoshimura.Makoto@ss.anritsu.co.jp !!)
+
+	-- Wed, 01 Mar 2000 01:51:55 +0900
+	
+rail.el(1.2.1)
+
+	Add: enable to replace SEMI codename in ~/.mime-example file.
+	Bug fix: characterp (APEL depend) -> integerp
+	         (thanks to sugiyama@ae.advantest.co.jp !!)
+	Bug fix: variable `codename' localized
+
+	-- Thu, 24 Feb 2000 23:30:04 +0900
+
+rail.el(1.2.0)
+
+	Add: More REMI codename
+	Add: code for fix irchat-pj bug even if don't convert codename.
+
+	-- Thu, 24 Feb 2000 00:26:32 +0900
+
+rail.el(1.1.5)
+
+	Change: New implementation (rail-common.el/rail-user-agent.el/rail-vars.el)
+	Bug fix: (irchat-pj bug) CTCP VERSION on irchat-pj with Meadow-beta
+
+	-- Sun, 20 Feb 2000 00:35:33 +0900
+
+rail.el(1.1.4)
+
+	Bug fix: MIME-Version: header (SEMI codename) and XEmacs compatible.
+	         (thanks to Taiji.Can@atesoft.advantest.co.jp !!)
+
+	-- Fri, 18 Feb 2000 01:07:20 +0900
+
+rail.el(1.1.3)
+
+	Add: "(SASHINUKI:60)"-like-formatted Meadow version compatible.
+	Add: REMI/1.14.0 and WREMI/1.14.0 (Uragawara) compatible.
+	Bug fix: xemacs-codename is nil when default
+	         (thanks to Taiji.Can@atesoft.advantest.co.jp !!)
+	Bug fix: WREMI compatible
+	         (thanks to Taiji.Can@atesoft.advantest.co.jp !!)
+	
+	-- Fri, 11 Feb 2000 00:21:06 +0900
+
+rail.el(1.1.2)
+
+	Bug fix: On some environment, rail-replace-into-iso8859-4 makes error.
+		 (thanks to honda@itl.tnr.sharp.co.jp !!)
+
+	-- Wed, 02 Feb 2000 00:33:32 +0900
+
+rail.el(1.1.1)
+
+	Bug fix: rail-user-agent-header-format (XEmacs & UTF-2000-MULE)
+
+	-- Sat, 22 Jan 2000 01:06:56 +0900
+
+rail.el(1.1.0)
+
+	Change: New implementation
+	Change: New table-maker (Thanks to kaoru@kaisei.org !!)
+
+	-- Wed, 19 Jan 2000 21:37:18 +0900
+
+rail.el(1.0.2)
+
+	Extension: add LIMIT version
+
+	-- Fri, 12 Nov 1999 02:50:41 +0900
+
+rail.el(1.0.1)
+
+	Bug Fix: variable "rail-mule-version-alist" -> "rail-mule-codename-alist"
+
+	-- Fri, 29 Oct 1999 00:02:07 +0900
+
+rail.el(1.0.0)
+
+	Stable Release!!
+	Add: Meadow-1.10 (TSUYU) compatible
+
+	-- Thu, 28 Oct 1999 00:51:42 +0900
+
+rail.el(0.8)
+
+	Extension: UTF-2000 Mule compatible
+
+	-- Sun, 17 Oct 1999 16:05:52 +0900
+
+rail.el(0.7)
+
+	Extension: irchat-pj compatible
+	Extension: XEmacs / Meadow compatible
+	Add: variable rail-translate-user-agent
+	Modify: variable *-version-alist -> *-codename-alist
+
+	-- Tue, 12 Oct 1999 23:18:29 +0900
+
+rail.el(0.6)
+
+	Add: variable "rail-additional-{flim|semi}-codename-alist"
+	     -> enable to add FLIM/SEMI codename by user-side.
+	Bug fix: return English codename when not exist on table
+	Bug fix: avoid SEMI_VERSION bug (item "Tamura")
+	Extension: enable to "make install" without "make"
+	Extension: enable to "make install-package" without "make package"
+
+	-- Sun, 03 Oct 1999 00:12:49 +0900
+
+rail.el(0.5)
+
+	Extension: enable to rewrite "MIME-Version:" header
+
+	-- Sun, 19 Sep 1999 02:10:38 +0900
+
+rail.el(0.4)
+
+	Obsolete: contrib/X_FLIM_VERSION and contrib/X_SEMI_VERSION
+
+	-- Sat, 18 Sep 1999 23:10:16 +0900
+
+rail.el(0.3)
+
+	Bug fix: Makefile (package depends on $(TABLES))
+	Bug fix: enable to detect ISO-8859-4 code set on XEmacs
+
+	-- Fri, 17 Sep 1999 00:10:21 +0900
+
+rail.el(0.2)
+
+	Bug fix: make.el (rail-main.el -> rail-user-agent.el)
+	-> Thanks to negi@KU3G.org
+
+	-- Thu, 16 Sep 1999 13:15:18 +0900
+
+rail.el(0.1)
+
+	Bug fix: PGPGPG detection
+	Add: variable "rail-version"
+	Filename change: rail-main.el -> rail-user-agent.el
+	Extension: enable to load after (load "mime-setup")
+
+	-- Thu, 16 Sep 1999 11:10:47 +0900
+
+rail.el(0.0)
+
+	Initial Release
+
+	-- Thu, 16 Sep 1999 00:59:12 +0900

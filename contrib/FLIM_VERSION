@@ -1,0 +1,254 @@
+[FLIM Version names] -*- coding: ctext; -*-
+
+1.0.0	-----
+
+;;-------------------------------------------------------------------------
+;;	Kinki Nippon Railway	$(B6a5&F|K\E4F;(B	http://www.kintetsu.co.jp/
+;;	Ky-Dòto Line-A		$(B5~ET@~(B
+;;-------------------------------------------------------------------------
+1.0.1	Ky-Dòto-A			$(B5~ET(B		; <=> JR, $(B5~ET;T8rDL6I(B
+1.1.0	T-Dòji-A			$(BEl;{(B
+1.2.0	J-Dþjò-A			$(B==>r(B
+1.2.1	Kamitobaguchi		$(B>eD;1)8}(B
+1.2.2	Takeda			$(BC]ED(B		; = $(B5~ET;T8rDL6I(B $(B1(4]@~(B
+1.3.0	Fushimi			$(BIz8+(B
+1.4.0	Kintetsu-Tambabashi	$(B6aE4C0GH66(B	; <=> $(B5~:e(B $(BC0GH66(B
+1.4.1	Momoyama-Gory-Dòmae-A	$(BEm;38fNMA0(B
+1.5.0	Mukaijima		$(B8~Eg(B
+1.6.0	Ogura			$(B>.AR(B
+1.7.0	Iseda			$(B0K@*ED(B
+1.8.0	-DÒkubo-A			$(BBg5WJ](B
+1.8.1	Kutsukawa		$(B5WDE@n(B
+1.9.0	Terada			$(B;{ED(B
+1.9.1	Tonosh-Dò-A			$(BIYLnAq(B
+1.9.2	Shin-Tanabe		$(B?7EDJU(B
+1.10.0	K-Dòdo-A			$(B6=8M(B
+1.10.1	Miyamaki		$(B;0;3LZ(B
+1.10.2	Kintetsu-Miyazu		$(B6aE45\DE(B
+1.10.3	Komada			$(B9}ED(B
+1.10.4	Shin-H-Dòsono-A		$(B?7=K1`(B		; <=> JR $(BJRD.@~(B $(B=K1`(B
+1.10.5	Kizugawadai		$(BLZDE@nBf(B
+1.11.0	Yamadagawa		$(B;3ED@n(B
+1.11.1	Takanohara		$(B9b$N86(B
+1.11.2	Heij-Dò-A			$(BJ?>k(B
+1.11.3	Saidaiji		$(B@>Bg;{(B		; = $(B6aE4(B $(BF`NI@~(B
+;;-------------------------------------------------------------------------
+;;	Kinki Nippon Railway	$(B6a5&F|K\E4F;(B	http://www.kintetsu.co.jp/
+;;	Ky-Dòto Line-A		$(B3`86@~(B
+;;-------------------------------------------------------------------------
+	(Saidaiji)		($(B@>Bg;{(B)
+1.12.0	Amagatsuji		$(BFt%vDT(B
+1.12.1	Nishinoky-Dò-A		$(B@>$N5~(B
+1.12.2	Kuj-Dò-A			$(B6e>r(B
+1.12.3	Kintetsu-K-Dòriyama-A	$(B6aE474;3(B
+1.12.4	Tsutsui			$(BE{0f(B
+1.12.5	Hirahata		$(BJ?C<(B		; = $(B6aE4(B $(BE7M}@~(B
+1.12.6	Family-K-Dòenmae-A		$(B%U%!%_%j!<8x1`A0(B
+1.12.7	Y-Dþzaki-A			$(B7k:j(B
+1.13.0	Iwami			$(B@P8+(B
+1.13.1	Tawaramoto		$(BED86K\(B		; <=> $(B6aE4(B $(B@>ED86K\(B
+1.13.2	Kasanui			$(B3^K%(B
+1.14.0	Ninokuchi		$(B?7%N8}(B
+1.14.1	Yagi			$(BH,LZ(B		; = $(B6aE4(B $(BBg:e@~(B
+1.14.2	Yagi-Nishiguchi		$(BH,LZ@>8}(B
+1.14.3	Unebigory-Dòmae-A		$(B@&K58fNMA0(B
+1.14.4	Kashiharajingu-mae	$(B3`86?@5\A0(B	; = $(B6aE4(B $(BFnBg:e@~!"5HLn@~(B
+
+
+;;-------------------------------------------------------------------------
+;;	Keihan Electric Railway	$(B5~:eEE5$E4F;(B	http://www.keihan.co.jp/
+;;				$(B3{El@~(B
+;;-------------------------------------------------------------------------
+1.14.5	Demachiyanagi		$(B=PD.Lx(B		; <=> $(B1CEE(B
+------	Keihan-Marutamachi	$(B5~:e4]B@D.(B
+------	Sanj-Dò-A			$(B;0>r(B		; <=> $(B5~ET;T8rDL6I(B $(BEl@>@~(B
+;;-------------------------------------------------------------------------
+;;	Keihan Electric Railway	$(B5~:eEE5$E4F;(B	http://www.keihan.co.jp/
+;;				$(B3{El@~(B
+;;-------------------------------------------------------------------------
+	(Sanj-Dò)-A			($(B;0>r(B)
+------	Keihan-Shij-Dò-A		$(B5~:e;M>r(B
+------	Keihan-Goj-Dò-A		$(B5~:e8^>r(B
+------	Shichij-Dò-A		$(B<7>r(B
+------	T-Dòfukuji-A		$(BElJ!;{(B		; = JR-W $(BF`NI@~(B
+------	Tobakaid-Dò-A		$(BD;1)39F;(B
+------	Fushimiinari		$(BIz8+0p2Y(B
+------	Fukakusa		$(B?<Ap(B
+------	Fujinomori		$(BF#?9(B
+------	Sumizome		$(BKO@w(B
+------	Tambabashi		$(BC0GH66(B		; <=> $(B6aE4(B $(B5~ET@~(B
+------	Fushimimomoyama		$(BIz8+Em;3(B
+------	Ch-Dþshojima-A		$(BCf=qEg(B		; = $(B5~:e(B $(B1'<#@~(B
+------	Yodo			$(BMd(B
+------	Yawatashi		$(BH,H(;T(B		; <=> $(B5~:e(B $(B9]:w@~(B ($(BCK;3%1!<%V%k(B)
+------	Hashimoto		$(B66K\(B
+------	Kuzuha			$(B>@MU(B
+------	Makino			$(BKRLn(B
+------	Goten-yama		$(B8fEB;3(B
+------	Hirakatashi		$(BKgJ};T(B		; = $(B5~:e(B $(B8rLn@~(B
+------	Hirakatak-Dòen-A		$(BKgJ}8x1`(B
+------	K-Dòzenji-A			$(B8wA1;{(B
+------	K-Dòrien-A			$(B9aN$1`(B
+------	Neyagawashi		$(B?220@n;T(B
+------	Kayashima		$(B3~Eg(B
+------	-DÒwada-A			$(BBgOBED(B
+------	Furukawabashi		$(B8E@n66(B
+------	Kadomashi		$(BLg??;T(B
+------	Nishisans-Dò-A		$(B@>;0Aq(B
+------	Moriguchishi		$(B<i8};T(B
+------	Doi			$(BEZ5o(B
+------	Takii			$(BBl0f(B
+------	Sembayashi		$(B@iNS(B
+------	Morish-Dòji-A		$(B?9>.O)(B
+------	Sekime			$(B4XL\(B
+------	Noe			$(BLn9>(B
+------	Ky-Dòbashi-A		$(B5~66(B		; <=> JR, $(BBg:e;T8rDL6I(B
+------	Temmabashi		$(BE7K~66(B		; <=> $(BBg:e;T8rDL6I(B $(BC+D.@~(B
+------	Kitahama		$(BKLIM(B		; <=> $(BBg:e;T8rDL6I(B $(B:f6Z@~(B
+------	Yodoyabashi		$(BMd2066(B		; <=> $(BBg:e;T8rDL6I(B $(B8fF26Z@~(B
+
+
+[Chao Version names]
+
+;;-------------------------------------------------------------------------
+;;	Kyoto Municipal Transfer Bureau
+;;				$(B5~ET;T8rDL6I(B
+;;		http://www.city.kyoto.jp/kotsu/main.htm
+;;	Karasuma Line		$(B1(4]@~(B
+;;-------------------------------------------------------------------------
+1.2.0	Takeda			$(BC]ED(B		; = $(B6aE4(B $(B5~ET@~(B
+1.3.0	Kuinabashi		$(B$/$$$J66(B
+1.4.0	J-Dþjò-A			$(B==>r(B
+1.6.0	Kuj-Dò-A			$(B6e>r(B
+1.6.1	Ky-Dòto-A			$(B5~ET(B		; <=> JR, $(B6aE4(B
+1.7.0	Goj-Dò-A			$(B8^>r(B
+1.8.0	Shij-Dò-A			$(B;M>r(B		; <=> $(B:e5^(B $(B5~ET@~(B
+1.9.0	Karasuma Oike		$(B1(4]8fCS(B	; = $(B5~ET;T8rDL6I(B $(BEl@>@~(B
+1.10.0	Marutamach		$(B4]B@D.(B
+1.11.0	Imadegawa		$(B:#=P@n(B
+1.11.1	Kuramaguchi		$(B0HGO8}(B
+1.11.2	Kita-Dòji-A			$(BKLBgO)(B
+1.11.3	Kitayama		$(BKL;3(B
+1.11.4	Matugasaki		$(B>>%v:j(B
+1.11.5	Kokusaikaikan		$(B9q:]2q4[(B
+
+;;-------------------------------------------------------------------------
+;;	West Japan Railway	$(B@>F|K\N95RE4F;(B	http://www.westjr.co.jp/
+;;	Nara Line	 	$(BF`NI@~(B
+;;-------------------------------------------------------------------------
+1.12.0	[JR] Ky-Dòto-A		$(B5~ET(B		; <=> $(B6aE4(B, $(B5~ET;T8rDL6I(B
+1.12.1	T-Dòfukuji-A		$(BElJ!;{(B		; <=> $(B5~:e(B $(BK\@~(B
+1.12.2	Inari			$(B0p2Y(B
+1.13.0	JR Fujinomori 		JR $(BF#?9(B
+1.14.0	Momoyama		$(BEm;3(B
+1.14.1	Rokujiz-Dò-A		$(BO;COB"(B
+------	Kohata			$(BLZH((B		; <=> $(B5~:e(B $(B1'<#@~(B
+------	-DÒbaku-A			$(B2+]!(B		; <=> $(B5~:e(B $(B1'<#@~(B
+------	Uji			$(B1'<#(B
+------	Shinden			$(B?7ED(B
+------	J-Dòyò-A			$(B>kM[(B
+------	Nagaike			$(BD9CS(B
+------	Yamashiro-Aodani	$(B;3>k@DC+(B
+------	Yamashiro-Taga		$(B;3>kB?2l(B
+------	Tamamizu		$(B6L?e(B
+------	Tanakura		$(BC*AR(B
+------	Kamikoma		$(B>e9}(B
+------	Kidu			$(BLZDE(B
+
+
+[CLIME Version names]
+
+;;-------------------------------------------------------------------------
+;;				$(BBg:eEE5$50F;(B
+;;				$(BK!N4;{@~(B	$(B!J5l(B $(BE7M}7ZJXoDF;(B $(BE7M}@~!K(B
+;;-------------------------------------------------------------------------
+1.13.0	Shin-H-Dòryþji-A		$(B?7K!N4;{(B	; <=> $(B4X@>K\@~(B $(BK!N4;{(B
+1.13.1	Ando			$(B0BEH(B
+1.13.2	Nukatabe		$(B3[EDIt(B
+1.13.3	Hirahata		$(BJ?C<(B		; = $(BBg50(B $(BE7M}@~!"@&K5@~(B
+
+;;-------------------------------------------------------------------------
+;;	Hokuriku Railway	$(BKLN&E4F;(B
+;;	Nomi Line		$(BG=H~@~(B		$(B!J5l(B $(BG=H~EE5$E4F;!K(B
+;;	fj.rec.rail.historical: <9fn962$ft5$1@nwjp2.odn.ne.jp> $(B$h$j(B
+;;-------------------------------------------------------------------------
+1.13.4	Shin-Terai		$(B?7;{0f(B		; <=> $(BKLN&K\@~(B $(B;{0f(B
+------	Tameike			$(BN/CS(B
+1.13.5	Kaga-Fukuoka		$(B2C2lJ!2,(B
+1.13.6	Nakanosh-Dò-A		$(BCf%N>1(B
+1.14.0	Gokend-Dò-A			$(B8^4VF2(B
+------	Terai-Nishiguchi	$(B;{0f@>8}(B
+------	Jid-Dòsha-Renraku-A		$(B<+F0<VO"Mm(B
+------	Hon-Terai		$(BK\;{0f(B
+------	Suenobuushijima		$(BKv?.5mEg(B
+------	Kaga-Sano		$(B2C2l:4Ln(B
+------	Yunotani-Ishiko		$(BErC+@P;R(B
+------	Tokuhisa		$(BFA5W(B
+------	Kami-Kaihatsu		$(B>e3+H/(B
+------	Tatsunokuchi		$(BC$8}(B
+------	Raimaru			$(BMh4](B
+------	Higama			$(B2P3x(B
+------	Iwauchi			$(B4dFb(B
+------	Mitsukuchi		$(B;08}(B
+------	Miyatake		$(B5\C](B
+------	Todashino		$(BEtBf:{(B
+------	Iwamoto			$(B4dK\(B
+------	Tenguyama		$(BE76i;3(B
+------	Hon-Tsurugi		$(BK\DaMh(B
+------	Tsurugi			$(BDaMh(B
+
+[LIMIT Version names]
+
+;;-------------------------------------------------------------------------
+;;	Kinki Nippon Railway	$(B6a5&F|K\E4F;(B	http://www.kintetsu.co.jp/
+;;	Minami--DÒsaka Line-A	$(BFnBg:e@~(B
+;;-------------------------------------------------------------------------
+1.13.0	-DÒsaka-Abenobashi-A		$(BBg:e0$ItLn66(B	; <=> JR, $(BBg:e;T8rDL6I(B
+1.13.1	Koboreguchi			$(B2OKY8}(B
+1.13.2	Kita-tanabe			$(BKLEDJU(B
+1.13.3	Imagawa				$(B:#@n(B
+1.13.4	Harinakano			$(B?KCfLn(B
+1.14.0	Yata				$(BLpED(B
+1.14.1	Kawachi-Amami			$(B2OFbE7H~(B
+1.14.2	Nunose				$(BI[G&(B
+1.14.3	Takaminosato			$(B9b8+%NN$(B
+1.14.4	Kawachi-Matsubara		$(B2OFb>>86(B
+1.14.5	Eganosh-Dò-A			$(B7C2f%NAq(B
+1.14.6	Takawashi			$(B9bOI(B
+1.14.7	Fujiidera			$(BF#0f;{(B
+------	Hajinosato			$(BEZ;U$NN$(B
+------	D-Dòmyòji-A				$(BF;L@;{(B		; = $(B6aE4(B $(BF;L@;{@~(B
+------	Furuichi			$(B8E;T(B		; = $(B6aE4(B $(BD9Ln@~(B
+------	Komagatani			$(B6p%vC+(B
+------	Kaminotaishi			$(B>e%NB@;R(B
+------	Nij-Dòsan-A				$(BFs>e;3(B
+------	Nij-Dòjinjaguchi-A			$(BFs>e?@<R8}(B
+------	Taimadera			$(BEvKc;{(B
+------	Iwaki				$(BHX>k(B
+------	Shakudo				$(B<\EZ(B		; = $(B6aE4(B $(B8f=j@~(B
+------	Takadashi			$(B9bED;T(B
+------	Ukiana				$(BIb9&(B
+------	B-Dòjò-A				$(BK7>k(B
+------	Kashiharajing-Dþ-Nisiguchi-A	$(B3`86?@5\@>8}(B
+------	Kashiharajing-Dþmae-A		$(B3`86?@5\A0(B	; = $(B6aE4(B $(B3`86@~(B, $(B5HLn@~(B
+
+;;-------------------------------------------------------------------------
+;;	Kinki Nippon Railway	$(B6a5&F|K\E4F;(B	http://www.kintetsu.co.jp/
+;;	Yoshino Line	$(B5HLn@~(B [$(B$G$b!"$3$l!"K\2H$,;H$&$s$d$m$J$!!D(B (^^;]
+;;-------------------------------------------------------------------------
+	(Kashiharajing-Dþmae)-A		($(B3`86?@5\A0(B)
+------	Okadera				$(B2,;{(B
+------	Asuka				$(BHtD;(B
+------	Tsubosakayama			$(BTd:e;3(B
+------	Ichio				$(B;THx(B
+------	Kuzu				$(B3k(B
+------	Yoshinoguchi			$(B5HLn8}(B		; = JR $(BOB2N;3@~(B
+------	Kusurimizu			$(BLt?e(B
+------	Fukugami			$(BJ!?@(B
+------	-DÒada-A				$(BBg0$B@(B
+------	Shimoichiguchi			$(B2<;T8}(B
+------	Koshibe				$(B1[It(B
+------	Muda				$(BO;ED(B
+------	Yamato-Kamiichi			$(BBgOB>e;T(B
+------	Yoshinojing-Dþ-A			$(B5HLn?@5\(B
+------	Yoshino				$(B5HLn(B
