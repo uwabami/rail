@@ -1,52 +1,52 @@
 -*- Text -*-
 
 Subject:      rail*.el FAQ
-Author:       $B$7$^$@(B $B$_$D$N$V(B <simm-emacs@fan.gr.jp>
+Author:       しまだ みつのぶ <simm-emacs@fan.gr.jp>
 Date:         Fri, 03 Mar 2000 06:12:58 +0900
 
-$B$3$N%U%!%$%k$O(B, rail $B$K4X$9$k(B FAQ $B$G$9(B.
-$B<g$K(B, install $B$*$h$S1?MQ$K4X$7$F(B, $B$h$/$"$j$,$A$J%(%i!<$NBP=hJ}K!$r(B
-$B5-=RCW$7$^$9(B.
+このファイルは, rail に関する FAQ です.
+主に, install および運用に関して, よくありがちなエラーの対処方法を
+記述致します.
 
 (Q1)
-Mule2.3 $B$G(B FLIM $B$d(B SEMI $B$N(B codename $B$,J8;z2=$1$9$k(B.
+Mule2.3 で FLIM や SEMI の codename が文字化けする.
 
 (A1)
-$B2<$N<j=g$G(B, FLIM $B$*$h$S(B SEMI $B$N:F(B install $B$r$*4j$$$7$^$9(B.
+下の手順で, FLIM および SEMI の再 install をお願いします.
 
-Mule2.3 $B$G$O(B, -*- coding: iso-8859-4; -*- $B$N$h$&$JI=8=$r2r<a$7$^$;$s(B.
-$B$=$N$?$a(B, ISO-8859-4 $B$r4^$`(B FLIM/SEMI $B$N(B codename $B$,(B byte compile $B;~$K(B
-$BJ8;z2=$1$7$F$7$^$$(B, rail $B$b2r<a$G$-$J$$>u67$K$J$C$F$*$j$^$9(B.
-$B$3$l$rD>$9$?$a$K$O(B, FLIM/SEMI $B$r(B, ISO-8859-4 code $B$,J8;z2=$1$7$J$$(B
-$B$h$&$K(B byte compile $B$9$kI,MW$,$"$j$^$9(B. $B0J2<$N<j=g$G(B, (FLIM)mime-def.el
-$B$H(B (SEMI)semi-def.el $B$NJ8;z%3!<%I$r(B compound-text $B$KJQ49$7$F(B, FLIM $B$H(B
-SEMI $B$N:F(B byte-compile $B$*$h$S(B install $B$r$*4j$$$7$^$9(B.
-    
- 1. mule $B5/F0(B
- 2. (FLIM$B$N>l9g(B) C-u C-x C-f mime-def.el
-    (SEMI$B$N>l9g(B) C-u C-x C-f semi-def.el
- 3. Mini-buffer $B$K(B "Coding-system: " $B$H$G$F$$$k$N$G(B,
-    $B$3$3$G(B "*iso-8859-4*" $B$HF~NO(B
- 4. $B@hF,$N9TKv$K(B, "-*- coding: iso-8859-4; -*-" $B$H$$$C$?(B
-    $BI=8=$,$"$l$P(B, $B$=$N9TKvItJ,$r%+%C%H(B
- 5. (FLIM$B$N>l9g(B) C-u C-x C-w mime-def.el
-    (SEMI$B$N>l9g(B) C-u C-x C-w semi-def.el
- 6. Mini-buffer $B$K(B "Coding-system: " $B$H$G$F$$$k$N$G(B,
-    $B$3$3$G(B "*ctext*" $B$HF~NO(B
- 7. $B:F%$%s%9%H!<%k(B
+Mule2.3 では, -*- coding: iso-8859-4; -*- のような表現を解釈しません.
+そのため, ISO-8859-4 を含む FLIM/SEMI の codename が byte compile 時に
+文字化けしてしまい, rail も解釈できない状況になっております.
+これを直すためには, FLIM/SEMI を, ISO-8859-4 code が文字化けしない
+ように byte compile する必要があります. 以下の手順で, (FLIM)mime-def.el
+と (SEMI)semi-def.el の文字コードを compound-text に変換して, FLIM と
+SEMI の再 byte-compile および install をお願いします.
+
+ 1. mule 起動
+ 2. (FLIMの場合) C-u C-x C-f mime-def.el
+    (SEMIの場合) C-u C-x C-f semi-def.el
+ 3. Mini-buffer に "Coding-system: " とでているので,
+    ここで "*iso-8859-4*" と入力
+ 4. 先頭の行末に, "-*- coding: iso-8859-4; -*-" といった
+    表現があれば, その行末部分をカット
+ 5. (FLIMの場合) C-u C-x C-w mime-def.el
+    (SEMIの場合) C-u C-x C-w semi-def.el
+ 6. Mini-buffer に "Coding-system: " とでているので,
+    ここで "*ctext*" と入力
+ 7. 再インストール
 
 
 (Q2)
-rail-1.2.1 $B$*$h$S(B rail-1.2.2 $B$r(B install $B8e(B, SEMI $B$*$h$S(B User-Agent
-(semi-gnus/Wanderlust etc.) $B$N(B install $B;~$K(B error $B$,H/@8$9$k$h$&$K$J$C$?(B
+rail-1.2.1 および rail-1.2.2 を install 後, SEMI および User-Agent
+(semi-gnus/Wanderlust etc.) の install 時に error が発生するようになった
 
 (A2)
-rail-1.2.{1|2} $B$N(B bug $B$G$9(B. $B2r7hJ}K!$O<!$N$H$*$j(B.
+rail-1.2.{1|2} の bug です. 解決方法は次のとおり.
 
- 1. rail-1.2.3 $B0J9_$r%$%s%9%H!<%k(B
- 2. Emacs $B$r(B, ~/.emacs $B$K(B (load "mime-setup") $B$,$"$k>uBV$G5/F0(B
- 3. $B$9$0$K(B, $B$b$7$/$O(B User-Agent $B$r0lC65/F0$7$F$+$i(B Emacs $B$r=*N;(B
- 4. SEMI/User-Agent $B$r:F(B compile, install
+ 1. rail-1.2.3 以降をインストール
+ 2. Emacs を, ~/.emacs に (load "mime-setup") がある状態で起動
+ 3. すぐに, もしくは User-Agent を一旦起動してから Emacs を終了
+ 4. SEMI/User-Agent を再 compile, install
 
-$B$3$l$G(B, error $B$,$G$:$K(B install $B$G$-$k$O$:$G$9(B.
+これで, error がでずに install できるはずです.
 
