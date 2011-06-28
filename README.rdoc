@@ -1,9 +1,9 @@
 = rail*.el ドキュメント
 
 Authors:: Youhei SASAKI <uwabami@gfd-dennou.org>
-Date:: $Lastupdate: 2011/06/28 19:20:22$
-Copyright:: 2010-2011 Youhei SASAKI, -2002 しまだみつのぶ. @see 00README
-License:: GPL-2, @see GPL-2
+Date:: $Lastupdate: 2011/06/28 19:26:26$
+Copyright:: 2010-2011 Youhei SASAKI, -2002 しまだみつのぶ. @see old/00README[https://raw.github.com/uwabami/rail/master/old/00README]
+License:: GPL-2, @see GPL-2[https://raw.github.com/uwabami/rail/master/GPL-2]
 
 == RAIL とは?
 
@@ -136,6 +136,12 @@ rail-1.2.0 のように, "." で区切られた3つの数字でバージョン�
 
 == HISTORY
 
-本プログラムは 2002 年までしまだみつひろさんによって開発/管理されていました. 有用なプログラムを作成して下さったしまださんへの感謝.
+本プログラムは 2002 年までしまだみつひろさんによって開発/管理されていました.
+過去の開発履歴は old/CHANGELOG[https://raw.github.com/uwabami/rail/master/old/CHANGELOG] にあります.
+しまださんが開発から手を引かれたので, 2010 年から佐々木がひきとって細々と公開しています.
+有用なプログラムを作成して下さったしまださんへの感謝をここに記しておきます.
 
-しまださんが開発から手を引かれたので, 2010 年から佐々木がひきとって細々と公開しています. 気がついたタイミングで適宜アップデートしていきますが, ご意見や要望などありましたら, 遠慮なくご連絡下さい.
+本プログラム群は気がついたタイミングで適宜アップデートしていきます. ご意見や要望などありましたら, 遠慮なくご連絡下さい.
+
+
+
