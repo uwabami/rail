@@ -1,7 +1,7 @@
 = rail*.el ドキュメント
 
 Authors:: Youhei SASAKI <uwabami@gfd-dennou.org>
-Date:: $Lastupdate: 2011/06/28 19:29:54$
+Date:: $Lastupdate: 2011/06/28 19:51:38$
 Copyright:: 1999-2002 しまだみつのぶ.
             2010-2011 Youhei SASAKI
 License:: GPL-2, @see GPL-2[https://raw.github.com/uwabami/rail/master/GPL-2]
@@ -54,6 +54,15 @@ MULE のコードネームが増えることはさほどないとは思います
   # make install
 
 してください. make distclean 直後に make install してもかまいません. また, XEmacs パッケージとして作成する場合は make のかわりに make install-package します.
+
+=== Debian パッケージ作成
+
+git-buildpackage を使います. パッケージ作成時は, 全ての tag と branch を取得した後に,
+
+  % git checkout debian
+  % git-buildpackage --git-debian-branch=debian --git-upstream-branch=master
+
+でパッケージが作成できます(collab-maintでGit リポジトリ持って, upstream を github にした方が良いかな)...
 
 == 使用方法
 
