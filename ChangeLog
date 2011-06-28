@@ -1,5 +1,29 @@
 2011-06-28 Youhei SASAKI <uwabami@gfd-dennou.org>
 
+	Add git2cl target
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2011-06-28 Youhei SASAKI <uwabami@gfd-dennou.org>
+
+	Add How to create .deb
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2011-06-28 Youhei SASAKI <uwabami@gfd-dennou.org>
+
+	fixup debian/upstream
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2011-06-28 Youhei SASAKI <uwabami@gfd-dennou.org>
+
+	change encoding: ISO-2022-jp to UTF-8
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2011-06-28 Youhei SASAKI <uwabami@gfd-dennou.org>
+
+	Imported Upstream version 1.2.6
+
+2011-06-28 Youhei SASAKI <uwabami@gfd-dennou.org>
+
 	change encoding: ISO-2022-jp to UTF-8
 	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
 
