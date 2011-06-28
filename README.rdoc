@@ -1,8 +1,9 @@
 = rail*.el ドキュメント
 
 Authors:: Youhei SASAKI <uwabami@gfd-dennou.org>
-Date:: $Lastupdate: 2011/06/28 19:26:26$
-Copyright:: 2010-2011 Youhei SASAKI, -2002 しまだみつのぶ. @see old/00README[https://raw.github.com/uwabami/rail/master/old/00README]
+Date:: $Lastupdate: 2011/06/28 19:29:54$
+Copyright:: 1999-2002 しまだみつのぶ.
+            2010-2011 Youhei SASAKI
 License:: GPL-2, @see GPL-2[https://raw.github.com/uwabami/rail/master/GPL-2]
 
 == RAIL とは?
@@ -108,11 +109,13 @@ rail-1.2.0 のように, "." で区切られた3つの数字でバージョン�
 
 == 意見・要望等
 
-メールで uwabami@gfd-dennou.org までお願いします.
+メールで uwabami@gfd-dennou.org[mailto:uwabami@gfd-dennou.org] までお願いします.
 
 == なんかうまく動かないんですが…
 
-まずは, 付属の FAQ.rdoc に目をとおしてください. もし FAQ.rdoc にないような現象が起こる場合, 上と同じく, メールで uwabami@gfd-dennou.org までお願いします.
+まずは, 付属の FAQ.rdoc[https://raw.github.com/uwabami/rail/master/FAQ.rdoc]に目をとおしてください.
+もし FAQ.rdoc[https://raw.github.com/uwabami/rail/master/FAQ.rdoc]にないような現象が起こる場合,
+上と同じく, メールで uwabami@gfd-dennou.org[mailto:uwabami@gfd-dennou.org] までお願いします.
 
 == 配布・改変について
 
