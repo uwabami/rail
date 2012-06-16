@@ -1,37 +1,37 @@
-[Meadow Version names]
-;; 	codename		漢字解釈	枕草子
-1.00	MIDORI			翠
-1.01	MIDORI-NO-TAMA		翠之珠
-1.10	TSUYU			露		66段
-1.14	AWSAKA			逢坂		62段
-1.15	SHOUBU			菖蒲		63段                               
+[Meadow Version names] -*- coding: ctext; -*-
+;; 	codename		漢字解釈	枕草子
+1.00	MIDORI			翠
+1.01	MIDORI-NO-TAMA		翠之珠
+1.10	TSUYU			露		66段
+1.14	AWSAKA			逢坂		62段
+1.15	SHOUBU			菖蒲		63段
 
 
 [Meadow Beta Version names]
-0.50b1	KASURI			絣
-0.50b2	KASURI			絣
-1.03a3	FUDI-GASANE		藤襲
-1.04a1	TSUTSUJI		躑躅
-1.05b1	TACHIBANA		橘
-1.05b2	YAMA-TACHIBANA		山橘
-1.06b1	HIINA			雛		27段
-1.06b2	FUTAAWI			二藍		27段
-1.06b3	EBIZOME			葡萄染		27段
-1.07b1	HACHISU			蓮		66段
-1.12b1	SASHINUKI		指貫		60段
-1.13b1	TANAHASHI		棚橋		61段
-1.13b2	UKIHASHI		浮橋		61段
+0.50b1	KASURI			絣
+0.50b2	KASURI			絣
+1.03a3	FUDI-GASANE		藤襲
+1.04a1	TSUTSUJI		躑躅
+1.05b1	TACHIBANA		橘
+1.05b2	YAMA-TACHIBANA		山橘
+1.06b1	HIINA			雛		27段
+1.06b2	FUTAAWI			二藍		27段
+1.06b3	EBIZOME			葡萄染		27段
+1.07b1	HACHISU			蓮		66段
+1.12b1	SASHINUKI		指貫		60段
+1.13b1	TANAHASHI		棚橋		61段
+1.13b2	UKIHASHI		浮橋		61段
 
-1.99a1	AWOFUCHI		青淵
-1.99a2	TANINOHORA		谷の洞
-1.99a3	HATAITA			鰭板
-1.99a4	KUROGANE		鉄
-1.99a5	TSUCHIKURE		土塊
-1.99a6	IKADUCHI		雷
-1.99a7	HAYACHI			疾風
-1.99a8	FUSAU			不祥雲
-1.99a9	HOKOBOSHI		矛星
-1.99a10	HIDIKASA		肱笠雨
-1.99a11	ARANORA			荒野ら
+1.99a1	AWOFUCHI		青淵
+1.99a2	TANINOHORA		谷の洞
+1.99a3	HATAITA			鰭板
+1.99a4	KUROGANE		鉄
+1.99a5	TSUCHIKURE		土塊
+1.99a6	IKADUCHI		雷
+1.99a7	HAYACHI			疾風
+1.99a8	FUSAU			不祥雲
+1.99a9	HOKOBOSHI		矛星
+1.99a10	HIDIKASA		肱笠雨
+1.99a11	ARANORA			荒野ら
 
-------	KAKITSUBATA		杜若		; 1.03 あたりかも
+------	KAKITSUBATA		杜若		; 1.03 あたりかも

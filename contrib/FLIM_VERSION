@@ -60,15 +60,15 @@
 ;;				$(B3{El@~(B
 ;;-------------------------------------------------------------------------
 1.14.5	Demachiyanagi		$(B=PD.Lx(B		; <=> $(B1CEE(B
-------	Keihan-Marutamachi	$(B5~:e4]B@D.(B
-------	Sanj-Dò-A			$(B;0>r(B		; <=> $(B5~ET;T8rDL6I(B $(BEl@>@~(B
+1.14.6	Marutamachi		$(B4]B@D.(B
+1.14.7	Sanj-Dò-A			$(B;0>r(B		; = $(B5~ET;T8rDL6I(B $(BEl@>@~(B
 ;;-------------------------------------------------------------------------
 ;;	Keihan Electric Railway	$(B5~:eEE5$E4F;(B	http://www.keihan.co.jp/
 ;;				$(B3{El@~(B
 ;;-------------------------------------------------------------------------
 	(Sanj-Dò)-A			($(B;0>r(B)
-------	Keihan-Shij-Dò-A		$(B5~:e;M>r(B
-------	Keihan-Goj-Dò-A		$(B5~:e8^>r(B
+1.14.8	Shij-Dò-A			$(B;M>r(B
+1.14.9	Goj-Dò-A			$(B8^>r(B
 ------	Shichij-Dò-A		$(B<7>r(B
 ------	T-Dòfukuji-A		$(BElJ!;{(B		; = JR-W $(BF`NI@~(B
 ------	Tobakaid-Dò-A		$(BD;1)39F;(B
