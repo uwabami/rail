@@ -1,3 +1,28 @@
+2012-06-16 Youhei SASAKI <uwabami@gfd-dennou.org>
+
+	Update README.rdoc
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2012-06-16 Youhei SASAKI <uwabami@gfd-dennou.org>
+
+	Add FAQ.rdoc
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2012-06-16 Youhei SASAKI <uwabami@gfd-dennou.org>
+
+	Update {FLIM,SEMI}_VERSION
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2012-06-16 Youhei SASAKI <uwabami@gfd-dennou.org>
+
+	Remove Output Results: rail-table-{flim,semi}.el
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2011-07-11 Youhei SASAKI <uwabami@gfd-dennou.org>
+
+	add .gitignore
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
 2011-06-28 Youhei SASAKI <uwabami@gfd-dennou.org>
 
 	Add git2cl target

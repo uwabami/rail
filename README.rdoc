@@ -1,10 +1,10 @@
 = rail*.el ドキュメント
 
 Authors:: Youhei SASAKI <uwabami@gfd-dennou.org>
-Date:: $Lastupdate: 2011/06/28 19:51:38$
+Date:: $Lastupdate: 2012/06/16 15:25:00$
 Copyright:: 1999-2002 しまだみつのぶ.
-            2010-2011 Youhei SASAKI
-License:: GPL-2, @see GPL-2[https://raw.github.com/uwabami/rail/master/GPL-2]
+            2010-2012 Youhei SASAKI
+License:: GPL-2+, @see GPL-2[https://raw.github.com/uwabami/rail/master/GPL-2]
 
 == RAIL とは?
 
@@ -44,7 +44,8 @@ XEmacs のパッケージとしてインストールする場合は
 
 等のようにすることで指定できます. 一般インストールと同じく, make package してから make install-package をしてもかまいません.
 
-MULE のコードネームが増えることはさほどないとは思いますが, FLIM や SEMI は, 随時コードネームが増加しております. より新しいコードネームを正しく変換するためには,
+MULE のコードネームが増えることはさほどないとは思いますが, FLIM や SEMI は, 随時コードネームが増加しております.
+より新しいコードネームを正しく変換するためには,
 [FLIM] FLIM(およびその派生形)のソースにある VERSION をcontrib/FLIM_VERSION にコピー
 [SEMI] SEMI(およびその派生形)のソースにある VERSION をcontrib/SEMI_VERSION にコピー
 したうえで,
@@ -55,14 +56,6 @@ MULE のコードネームが増えることはさほどないとは思います
 
 してください. make distclean 直後に make install してもかまいません. また, XEmacs パッケージとして作成する場合は make のかわりに make install-package します.
 
-=== Debian パッケージ作成
-
-git-buildpackage を使います. パッケージ作成時は, 全ての tag と branch を取得した後に,
-
-  % git checkout debian
-  % git-buildpackage --git-debian-branch=debian --git-upstream-branch=master
-
-でパッケージが作成できます(collab-maintでGit リポジトリ持って, upstream を github にした方が良いかな)...
 
 == 使用方法
 
@@ -70,13 +63,15 @@ git-buildpackage を使います. パッケージ作成時は, 全ての tag と
 
     (require 'rail)
 
-と記述しておくだけです. 今まで ISO-8859-4 を使った User-Agent:フィールドが, 日本語表記に変更されます. また, irchat-pj のCTCP VERSION の結果が日本語化されます.
+と記述しておくだけです. 今まで ISO-8859-4 を使った User-Agent:フィールドが, 日本語表記に変更されます.
+irchat-pj の CTCP VERSION の結果も日本語化されます.
 
 また, rail.el は tm に含まれる genjis.el の互換機能も提供します. ~/.emacs の, (require 'rail) の記述の手前に
 
     (setq rail-emulate-genjis t)
 
-と書いておくことで, 変数 mule-version が日本語化されます. なお, rail-emulate-genjis が nil であっても, User-Agent: に含まれるMule の codename は日本語表記になります.
+と書いておくことで, 変数 mule-version が日本語化されます.
+なお, rail-emulate-genjis が nil であっても User-Agent: に含まれる Mule の codename は日本語表記になります.
 
 User-Agent: はそのままで, genjis 機能だけ利用したい場合は,
 
@@ -104,11 +99,15 @@ irchat-pj の CTCP VERSION をいじりたくない場合は,
 
 == APEL 依存性
 
-基本的に, rail のコードは APEL に依存しておりません. ただ, ほとんどの場合 FLIM や SEMI のコードネーム変換に利用されることでしょうから, そういう意味では APEL 依存なのかもしれません.
+基本的に, rail のコードは APEL に依存しておりません. ただ, ほとんどの場合
+FLIM や SEMI のコードネーム変換に利用されることでしょうから, そういう意味
+では APEL 依存なのかもしれません.
 
 == バージョン番号
 
-rail-1.2.0 のように, "." で区切られた3つの数字でバージョンを表しております. ふたつめの数字 (上の例だと, 2) が偶数のものが安定バージョン, 奇数のものが開発バージョンです.
+rail-1.2.0 のように, "." で区切られた3つの数字でバージョンを表しておりま
+す. ふたつめの数字 (上の例だと, 2) が偶数のものが安定バージョン, 奇数のも
+のが開発バージョンです.
 
 == 今後の予定
 
@@ -148,12 +147,13 @@ rail-1.2.0 のように, "." で区切られた3つの数字でバージョン�
 
 == HISTORY
 
-本プログラムは 2002 年までしまだみつひろさんによって開発/管理されていました.
-過去の開発履歴は old/CHANGELOG[https://raw.github.com/uwabami/rail/master/old/CHANGELOG] にあります.
-しまださんが開発から手を引かれたので, 2010 年から佐々木がひきとって細々と公開しています.
-有用なプログラムを作成して下さったしまださんへの感謝をここに記しておきます.
+本プログラムは 2002 年までしまだみつひろさんによって開発/管理されていまし
+た. 過去の開発履歴は
+old/CHANGELOG[https://raw.github.com/uwabami/rail/master/old/CHANGELOG]
+にあります. しまださんが開発から手を引かれたので, 2010 年から佐々木がひき
+とって細々と公開しています. 有用なプログラムを作成して下さったしまださん
+への感謝をここに記しておきます.
 
-本プログラム群は気がついたタイミングで適宜アップデートしていきます. ご意見や要望などありましたら, 遠慮なくご連絡下さい.
-
-
+本プログラム群は気がついたタイミングで適宜アップデートしていきます. ご意
+見や要望などありましたら, 遠慮なくご連絡下さい.
 
