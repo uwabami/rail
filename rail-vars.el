@@ -42,6 +42,7 @@
 ;; replace candidates for replacement
 (defvar rail-product-name-alist
   '(("SEMI"          . semi)
+    ("SEMI-EPG"      . semi)
     ("WEMI"          . semi)
     ("REMI"          . semi)
     ("WREMI"         . semi)
