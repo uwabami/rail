@@ -33,7 +33,7 @@
 (require 'rail-table-utf2000)
 (require 'rail-table-xmas)
 
-(defvar rail-version "1.2.9"
+(defvar rail-version "1.2.10"
   "Version number of rail.el")
 
 (defvar rail-temporary-buffer-name " *Rail*"

@@ -1,8 +1,7 @@
 #
 # Makefile for rail
 #
-# $Id: Makefile,v 1.7 1994/02/23 15:05:00 tmo Exp $
-# last modified by simm-emacs@fan.gr.jp, Fri, 17 Sep 1999 00:10:36 +0900
+# $Lastupdate: 2013/07/08 16:28:22$
 #
 
 LISPDIR	= default
@@ -17,7 +16,7 @@ MULEVER	= contrib/MULE_VERSION
 MW32VER	= contrib/MEADOW_VERSION
 FLIMVER	= contrib/FLIM_VERSION contrib/ADD_FLIM_VERSION
 SEMIVER	= contrib/SEMI_VERSION contrib/ADD_SEMI_VERSION
-
+RAILVER = $(shell grep rail-version rail-vars.el | awk '{print $$3}')
 MAKE	=	make.el
 
 #
@@ -69,10 +68,10 @@ install-package: package
 	$(XEMACS) -q -no-site-file -batch -l ./$(MAKE) -f install-package $(PACKAGEDIR)
 
 # clean up
-clean: 
+clean:
 	-rm -f *~ *.elc
 
-distclean: 
+distclean:
 	-rm -f *~ *.elc $(MTABLES)
 
 maintainer-clean:
@@ -80,8 +79,13 @@ maintainer-clean:
 
 cl: git2cl
 git2cl:
-	@git log --date=short --pretty=format:"%ad %an <%ae>%n%n%s%n%b" | \
+	@git log --date=short --pretty=format:"%ad %an <%ae>%n%n%s%n%b%n" | \
 	sed -e 's/^\(.*\)$$/\t\1/g' | \
 	sed -e 's/^\t\([0-9]*-[0-9]*-[0-9]*.*\)$$/\1/g' | \
-	sed -e 's/^\t$$//g' \
+	sed -e 's/^\t$$//g' | \
+	sed ':loop; N; $$!b loop; s/\n\n\n/\n\n/g' \
 	> ChangeLog
+# create tar.gz
+tar:
+	@git archive --format=tar --prefix=rail-$(RAILVER)/ HEAD \
+	  | gzip -9 > ../rail-$(RAILVER).tar.gz
