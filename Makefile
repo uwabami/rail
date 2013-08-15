@@ -79,7 +79,7 @@ maintainer-clean:
 
 cl: git2cl
 git2cl:
-	@git log --date=short --pretty=format:"%ad %an <%ae>%n%n%s%n%b%n" | \
+	@git log --date=short --pretty=format:"%ad  %an  <%ae>%n%n* %s%n%b%n" | \
 	sed -e 's/^\(.*\)$$/\t\1/g' | \
 	sed -e 's/^\t\([0-9]*-[0-9]*-[0-9]*.*\)$$/\1/g' | \
 	sed -e 's/^\t$$//g' | \
