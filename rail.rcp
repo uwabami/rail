@@ -3,6 +3,6 @@
        :type github
        :pkgname "uwabami/rail"
        :autoloads nil
-       :depends flim
+       :depends (flim semi)
        :build `(("make" ,(concat " EMACS=" el-get-emacs)))
        )
