@@ -1,107 +1,126 @@
-2013-07-08 Youhei SASAKI <uwabami@gfd-dennou.org>
+2013-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	Bump Version: 1.2.10
+	* Bump version: 1.2.11
 	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
 
-2013-07-06 Youhei SASAKI <uwabami@gfd-dennou.org>
+2013-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	Merge pull request #2 from tats/feature/semi-epg
+	* Update rail.rcp: add depends 'semi'
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2013-08-15  Tatsuya Kinoshita  <tats@vega.ocn.ne.jp>
+
+	* Follow GNU-style ChangeLog
+
+2013-07-08  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Add el-get recipe
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2013-07-08  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Bump Version: 1.2.10
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2013-07-06  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Merge pull request #2 from tats/feature/semi-epg
 	Support SEMI-EPG, Thanks to Tatsuya Kinoshita!
 
-2013-07-06 Tatsuya Kinoshita <tats@vega.ocn.ne.jp>
+2013-07-06  Tatsuya Kinoshita  <tats@vega.ocn.ne.jp>
 
-	Support SEMI-EPG
+	* Support SEMI-EPG
 
-2013-06-13 Youhei SASAKI <uwabami@gfd-dennou.org>
+2013-06-13  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	Bump Version number
+	* Bump Version number
 	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
 
-2013-06-13 Youhei SASAKI <uwabami@gfd-dennou.org>
+2013-06-13  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	Merge pull request #1 from tats/bug/version
+	* Merge pull request #1 from tats/bug/version
 	Fix incorrect rail-version, Thanks to Tatsuya Kinoshita !
 
-2013-06-13 Tatsuya Kinoshita <tats@debian.org>
+2013-06-13  Tatsuya Kinoshita  <tats@debian.org>
 
-	Fix incorrect rail-version
+	* Fix incorrect rail-version
 
-2013-05-20 Youhei SASAKI <uwabami@gfd-dennou.org>
+2013-05-20  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	Remove Output Results: rail-table-{mule,meadow}.el
+	* Remove Output Results: rail-table-{mule,meadow}.el
 	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
 
-2013-05-20 Youhei SASAKI <uwabami@gfd-dennou.org>
+2013-05-20  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	Update codename: MEADOW,SEMI
+	* Update codename: MEADOW,SEMI
 	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
 
-2012-06-16 Youhei SASAKI <uwabami@gfd-dennou.org>
+2012-06-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	Update README.rdoc
+	* Update README.rdoc
 	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
 
-2012-06-16 Youhei SASAKI <uwabami@gfd-dennou.org>
+2012-06-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	Add FAQ.rdoc
+	* Add FAQ.rdoc
 	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
 
-2012-06-16 Youhei SASAKI <uwabami@gfd-dennou.org>
+2012-06-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	Update {FLIM,SEMI}_VERSION
+	* Update {FLIM,SEMI}_VERSION
 	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
 
-2012-06-16 Youhei SASAKI <uwabami@gfd-dennou.org>
+2012-06-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	Remove Output Results: rail-table-{flim,semi}.el
+	* Remove Output Results: rail-table-{flim,semi}.el
 	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
 
-2011-07-11 Youhei SASAKI <uwabami@gfd-dennou.org>
+2011-07-11  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	add .gitignore
+	* add .gitignore
 	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
 
-2011-06-28 Youhei SASAKI <uwabami@gfd-dennou.org>
+2011-06-28  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	Add git2cl target
+	* Add git2cl target
 	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
 
-2011-06-28 Youhei SASAKI <uwabami@gfd-dennou.org>
+2011-06-28  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	Add How to create .deb
+	* Add How to create .deb
 	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
 
-2011-06-28 Youhei SASAKI <uwabami@gfd-dennou.org>
+2011-06-28  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	fixup debian/upstream
+	* fixup debian/upstream
 	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
 
-2011-06-28 Youhei SASAKI <uwabami@gfd-dennou.org>
+2011-06-28  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	change encoding: ISO-2022-jp to UTF-8
+	* change encoding: ISO-2022-jp to UTF-8
 	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
 
-2011-06-28 Youhei SASAKI <uwabami@gfd-dennou.org>
+2011-06-28  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	Imported Upstream version 1.2.6
+	* Imported Upstream version 1.2.6
 
-2011-06-28 Youhei SASAKI <uwabami@gfd-dennou.org>
+2011-06-28  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	change encoding: ISO-2022-jp to UTF-8
+	* change encoding: ISO-2022-jp to UTF-8
 	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
 
-2011-06-28 Youhei SASAKI <uwabami@gfd-dennou.org>
+2011-06-28  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	fixup Hyperlink
+	* fixup Hyperlink
 	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
 
-2011-06-28 Youhei SASAKI <uwabami@gfd-dennou.org>
+2011-06-28  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	Add README.rdoc, FAQ.rdoc
+	* Add README.rdoc, FAQ.rdoc
 	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
 
-2011-06-28 Youhei SASAKI <uwabami@gfd-dennou.org>
+2011-06-28  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	initial import
+	* initial import
 	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
 
