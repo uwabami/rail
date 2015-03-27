@@ -12,5 +12,5 @@ before_install:
   - sudo apt-get install -qq $EMACS
   - sudo apt-get install -qq flim
 script:
-  make EMACS=$EMACS
-  make clean
+  - make EMACS=$EMACS
+  - make clean
