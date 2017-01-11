@@ -1,16 +1,24 @@
 language: emacs-lisp
 env:
-  - EMACS=emacs23
-  - EMACS=emacs24
-  - EMACS=emacs-snapshot
+  matrix:
+    - EVM_EMACS=emacs-24.4-travis
+    - EVM_EMACS=emacs-24.5-travis
+    - EVM_EMACS=emacs-25.1-travis
+    - EVM_EMACS=emacs-git-snapshot-travis
 matrix:
   allow_failures:
-    - env: EMACS=emacs-snapshot
+    - env: EMACS=emacs-git-snapshot-travis
 before_install:
-  - sudo add-apt-repository -y ppa:cassou/emacs
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq $EMACS
-  - sudo apt-get install -qq flim
+  - export PATH="$HOME/.cask/bin:$PATH"
+  - export PATH="$HOME/.evm/bin:$PATH"
+  - git clone https://github.com/rejeep/evm.git $HOME/.evm
+  - evm config path /tmp
+  - evm install $EVM_EMACS
+  - evm use $EVM_EMACS
+  - curl -fsSkL https://raw.github.com/cask/cask/master/go | python
+  - cask --verbose --debug
 script:
-  - make EMACS=$EMACS
+  - evm use $EVM_EMACS
+  - make
   - make clean
+  - make distclean
