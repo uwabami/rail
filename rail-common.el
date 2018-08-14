@@ -22,7 +22,7 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:
 
@@ -99,7 +99,7 @@ If direction is nil, returns (car (rassoc string alist))."
 	    (delete-region b1 e2)
 	    (insert (or ccode code) new-delimiter num)
 	    (if flag
-		(or rail-convert-direction (delete-backward-char 1))
+		(or rail-convert-direction (delete-char 1))
 	      (and rail-convert-direction (insert "段"))))
 	(rail-replace-codename-primitive
 	 rail-mule-version-header-format
