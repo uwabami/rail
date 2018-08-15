@@ -22,37 +22,45 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:
+(eval-when-compile
+  (require 'rail-common)
+  (require 'mime-view))
 
 (defun rail-mime-example-save-primitive (func)
   (save-excursion
     (or (and rail-user-agent-convert-mime-example
-	     (set-buffer (get-buffer-create rail-temporary-buffer-name))
-	     (progn
-	       (erase-buffer)
-	       (insert mime-view-version)
-	       (goto-char (point-min))
-	       (and (looking-at rail-mime-view-version-format)
-		    (eq 'semi (cdr (assoc (buffer-substring
-					   (match-beginning 1)
-					   (match-end 1))
-					  rail-product-name-alist)))
-		    (rail-replace-codename-primitive
-		     rail-mime-view-version-format
-		     rail-additional-semi-codename-alist rail-semi-codename-alist))
-	       (let ((mime-view-version
-		      (buffer-substring (point-min) (point-max))))
-		 (funcall func))
-	       t))
-	(funcall func))))
+             (set-buffer (get-buffer-create rail-temporary-buffer-name))
+             (progn
+               (erase-buffer)
+               (insert mime-view-version)
+               (goto-char (point-min))
+               (and (looking-at rail-mime-view-version-format)
+                    (eq 'semi (cdr (assoc (buffer-substring
+                                           (match-beginning 1)
+                                           (match-end 1))
+                                          rail-product-name-alist)))
+                    (rail-replace-codename-primitive
+                     rail-mime-view-version-format
+                     rail-additional-semi-codename-alist rail-semi-codename-alist))
+               (let ((mime-view-version
+                      (buffer-substring (point-min) (point-max))))
+                 (funcall func))
+               t))
+        (funcall func))))
 
 (defun rail-mime-example-make-funcs (func)
   (let ((new (intern (concat "rail-" (prin1-to-string func))))
-	(old (intern (concat "rail-" (prin1-to-string func) "-original"))))
+        (old (intern (concat "rail-" (prin1-to-string func) "-original"))))
     (fset old  (symbol-function func))
     (fset func new)))
+
+(defun rail-mime-save-situation-examples ()
+  (let ((mime-situation-examples-file-coding-system 'ctext))
+    (rail-mime-example-save-primitive 'rail-mime-save-situation-examples-original)))
+(rail-mime-example-make-funcs 'mime-save-situation-examples)
 
 (provide 'rail-mime-example)
 
