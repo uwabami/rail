@@ -70,9 +70,43 @@ If direction is nil, returns (car (rassoc string alist))."
 	  (delete-region beg end)
 	  (insert (or ccode code))))))
 
+(defun rail-replace-codename-meadow (&optional char rchar)
+  "Replace Meadow codename according to pattern."
+  (save-excursion
+    (let* ((delimiter (cond ((stringp char)
+			     (string-to-char char))
+			    ((integerp char)
+			     char)
+			    (t ?:)))
+	   (new-delimiter (cond ((stringp rchar)
+				 (string-to-char rchar))
+				((integerp rchar)
+				 rchar)
+				(t delimiter))))
+      (if (looking-at (format rail-meadow-beta-version-header-format delimiter))
+	  (let* ((b1    (match-beginning 2))
+		 (e1    (match-end 2))
+		 (b2    (match-beginning 3))
+		 (e2    (match-end 3))
+		 (num   (buffer-substring b2 e2))
+		 (flag  (string-match "段" num))
+		 (code  (buffer-substring b1 e1))
+		 (ccode (rail-assoc code
+				    (append rail-additional-meadow-codename-alist
+					    rail-meadow-codename-alist)
+				    rail-convert-direction)))
+	    (goto-char b1)
+	    (delete-region b1 e2)
+	    (insert (or ccode code) new-delimiter num)
+	    (if flag
+		(or rail-convert-direction (delete-char 1))
+	      (and rail-convert-direction (insert "段"))))
+	(rail-replace-codename-primitive
+	 rail-mule-version-header-format
+	 rail-additional-meadow-codename-alist rail-meadow-codename-alist)))))
 
 (defun rail-replace-codename (string flag &rest alist)
-  "Replace mule-version, and utf-2000-version string."
+  "Replace mule-version, (Meadow-version), and utf-2000-version string."
   (let (buf result)
     (save-excursion
       (setq buf (get-buffer-create rail-temporary-buffer-name))
@@ -82,10 +116,11 @@ If direction is nil, returns (car (rassoc string alist))."
 	    (insert string)
 	    (goto-char (point-min))
 	    (if (not flag)
-            (apply 'rail-replace-codename-primitive
-                   rail-mule-version-header-format alist))
+		(apply 'rail-replace-codename-primitive rail-mule-version-header-format alist)
+	      (search-forward "Meadow-" nil t)
+	      (rail-replace-codename-meadow))
 	    (setq result (buffer-substring (point-min) (point-max))))
-      (kill-buffer buf)))
+	(kill-buffer buf)))
     (or result string)))
 
 (provide 'rail-common)

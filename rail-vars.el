@@ -22,14 +22,16 @@
 
 ;;; Commentary:
 
-;;
+;; 
 
 ;;; Code:
 
 (require 'rail-table-semi)
 (require 'rail-table-flim)
 (require 'rail-table-mule)
+(require 'rail-table-meadow)
 (require 'rail-table-utf2000)
+(require 'rail-table-xmas)
 
 (defvar rail-version "1.2.11"
   "Version number of rail.el")
@@ -51,15 +53,23 @@
     ("CHAO"          . flim)
     ("LIMIT"         . flim)
     ("MULE"          . mule)
-    ("UTF-2000-MULE" . utf2000))
+    ("MEADOW"        . meadow)
+    ("UTF-2000-MULE" . utf2000)
+    ("XEMACS"        . xmas))
   "Association-list of product name.
 Each pair is '(\"Name\" . kind)")
 
-;; Mule  UTF-2000-MULE version format
+;; Mule / Meadow / UTF-2000-MULE version format
 (defvar rail-mule-version-header-format
   "\\([.0-9]+\\|[.0-9]+ Beta[0-9]*\\) (\\([^()]+\\))"
-  "Format of mule-version, utf-2000-version string.
+  "Format of mule-version, (Meadow-version), utf-2000-version string.
 This variable is used in `rail-replace-codename-primitive'.")
+
+;; Meadow beta version format
+(defvar rail-meadow-beta-version-header-format
+  "\\([.0-9]+\\|[.0-9]+ Beta[0-9]*\\)[ \t\r\n](\\([^()]+\\)%c\\([0-9]+段?\\))"
+  "Format of (Meadow-version) string for Meadow-beta.
+This variable is used in rail-replace-codename.")
 
 ;; mime-view-version format
 (defvar rail-mime-view-version-format
@@ -86,6 +96,18 @@ ex. LIMIT/1.13.4 (Harinakano)
 match-data 1: interface product name
 match-data 2: codename")
 
+;; User-Agent: header format (for XEmacs beta)
+(defvar rail-user-agent-header-xmas-format
+  "\\([.0-9]+\\)[ \t\r\n]+([^()]+)[ \t\r\n]+(\\([^()]+\\))"
+  "User-Agent: header pattern for XEmacs. Each products are written like below.
+ex1. XEmacs/21.1 (20 Minutes to Nikko)
+ex2. XEmacs/21.2 (beta19) (Shinjuku)
+
+match-data 1: interface product name
+match-data 2: architecture or codename
+
+Used only when having beta or patch number.")
+
 ;; User-Agent: header
 (defvar rail-user-agent-header-item-list
   '("User-Agent" "X-Mailer" "X-Newsreader")
@@ -95,6 +117,10 @@ Each codename should be aligned like `rail-user-agent-header-format'.")
 ;; CTCP VERSION format
 (defvar rail-pj-mule-format "\\([.0-9]+\\) (\\([^()]+\\))"
   "CTCP VERSION format for Mule version")
+(defvar rail-pj-meadow-format "\\([.0-9]+\\) (\\([^()]+\\))"
+  "CTCP VERSION format for Meadow version")
+(defvar rail-pj-xmas-format "\\([-.0-9A-Za-z]+\\) \"\\([^\"]+\\)\""
+  "CTCP VERSION format for XEmacs version")
 (defvar rail-pj-utf-2000-format "[/ ][.0-9]+"
   "CTCP VERSION format for UTF-2000-MULE version")
 (defvar rail-pj-utf-2000-retry-format "\\([.0-9]+\\) (\\([^\"]+\\))"
@@ -107,8 +133,12 @@ Each codename should be aligned like `rail-user-agent-header-format'.")
   "Additional codename for FLIM.")
 (defvar rail-additional-mule-codename-alist nil
   "Additional codename for Mule.")
+(defvar rail-additional-meadow-codename-alist nil
+  "Additional codename for Meadow.")
 (defvar rail-additional-utf2000-codename-alist nil
   "Additional codename for UTF-2000 Mule.")
+(defvar rail-additional-xmas-codename-alist nil
+  "Additional codename for XEmacs.")
 
 ;; replace original codename or not
 (defvar rail-user-agent-replace-mime-library-product t
@@ -117,6 +147,12 @@ Each codename should be aligned like `rail-user-agent-header-format'.")
   "If non-nil, replace SEMI codename.")
 (defvar rail-emulate-genjis t
   "If non-nil, replace MULE version.")
+(defvar rail-mule-replace-meadow-version t
+  "If non-nil, replace (Meadow-version).")
+(defvar rail-xmas-replace-xemacs-codename t
+  "If non-nil, replace `xemacs-codename'.")
+(defvar rail-xmas-replace-utf-2000-version t
+  "If non-nil, replace `utf-2000-version'.")
 
 ;; for rail-pj
 (defvar rail-pj-convert t

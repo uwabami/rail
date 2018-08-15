@@ -22,7 +22,7 @@
 
 ;;; Commentary:
 
-;;
+;; 
 
 ;;; Code:
 
@@ -33,8 +33,29 @@
      (featurep 'mule)
      (boundp 'mule-version)
      (setq mule-version (rail-replace-codename mule-version nil
-                                               rail-additional-mule-codename-alist
-                                               rail-mule-codename-alist)))
+					       rail-additional-mule-codename-alist
+					       rail-mule-codename-alist)))
+
+(and rail-mule-replace-meadow-version
+     (featurep 'meadow)
+     (not (fboundp 'rail-mule-original-Meadow-version))
+     (fset 'rail-mule-original-Meadow-version (symbol-function 'Meadow-version))
+     (defvar rail-mule-meadow-en-version
+       (rail-mule-original-Meadow-version)
+       "Meadow-version in ANK code")
+     (defvar rail-mule-meadow-ja-version
+       (rail-replace-codename rail-mule-meadow-en-version t
+			      rail-additional-meadow-codename-alist
+			      rail-meadow-codename-alist)
+       "Meadow-verion in JISX0208 code")
+     (defun rail-mule-meadow-version (&optional dummy)
+       "return the Meadow's version in string. 
+The optional argument DUMMY is not currently used."
+       (if rail-convert-direction
+	   rail-mule-meadow-ja-version
+	 rail-mule-meadow-en-version))
+     (fset 'Meadow-version 'rail-mule-meadow-version))
+
 (provide 'rail-mule)
 
 ;;; rail-mule.el ends here

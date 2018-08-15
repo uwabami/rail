@@ -75,24 +75,29 @@
            (if (not (looking-at "\\([^ \t\r\n/]+\\)/"))
                (skip-chars-forward "^ \t\r\n")
              (let ((kind (rail-assoc
-                          (upcase
-                           (buffer-substring (match-beginning 1) (match-end 1)))
+                          (upcase (buffer-substring (match-beginning 1) (match-end 1)))
                           rail-product-name-alist t)))
                (if (not kind)
                    (skip-chars-forward "^ \t\r\n")
                  (goto-char (match-end 0))
-                 (let* ((skind (prin1-to-string kind))
-                        (alist-a
-                         (intern (format "rail-additional-%s-codename-alist" skind)))
-                        (alist-b
-                         (intern (format "rail-%s-codename-alist" skind))))
-                   (and (looking-at rail-user-agent-header-format)
-                        (boundp alist-a)
-                        (boundp alist-b)
-                        (rail-replace-codename-primitive
-                         rail-user-agent-header-format
-                         (symbol-value alist-a) (symbol-value alist-b))))
-                 ))))
+                 (or (and (eq 'xmas kind)
+                          (looking-at rail-user-agent-header-xmas-format)
+                          (rail-replace-codename-primitive
+                           rail-user-agent-header-xmas-format
+                           rail-additional-xmas-codename-alist rail-xmas-codename-alist))
+                     (let* ((skind (prin1-to-string kind))
+                            (alist-a
+                             (intern (format "rail-additional-%s-codename-alist" skind)))
+                            (alist-b
+                             (intern (format "rail-%s-codename-alist" skind))))
+                       (and (looking-at rail-user-agent-header-format)
+                            (boundp alist-a)
+                            (boundp alist-b)
+                            (rail-replace-codename-primitive
+                             rail-user-agent-header-format
+                             (symbol-value alist-a) (symbol-value alist-b)))))
+                 (and (eq 'meadow kind)
+                      (rail-replace-codename-meadow))))))
          (buffer-substring (point-min) (point-max)))))
 
 ;; replace header with rail-user-agent-replace-{mime-version|user-agent}-region
