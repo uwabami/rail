@@ -20,5 +20,6 @@ before_script:
 script:
   - emacs --version
   - echo `pwd`
-  - cask
+  - ls -la Cask
+  - ( cd $HOME/build/uwabami/rail && cask )
   - make test
