@@ -19,5 +19,5 @@ before_script:
   - sh .travis-ci/install-cask.sh
 script:
   - emacs --version
-  - EMACS=$EVM_EMACS cask
+  - cask
   - make test
