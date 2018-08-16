@@ -1,23 +1,23 @@
+sudo: false
 language: emacs-lisp
+cache:
+  directories:
+    - $HOME/local
 env:
+  global:
+    - PATH=$HOME/local/bin:$HOME/local/evm/bin:$HOME/local/cask/bin:$PATH
   matrix:
     - EVM_EMACS=emacs-24.4-travis
     - EVM_EMACS=emacs-24.5-travis
     - EVM_EMACS=emacs-25.1-travis
+    - EVM_EMACS=emacs-25.2-travis
+    - EVM_EMACS=emacs-25.3-travis
+    - EVM_EMACS=emacs-26.1-travis
     - EVM_EMACS=emacs-git-snapshot-travis
-matrix:
-  allow_failures:
-    - env: EMACS=emacs-git-snapshot-travis
-before_install:
-  - git clone https://github.com/rejeep/evm.git $HOME/.evm
-  - export PATH="$HOME/.evm/bin:$PATH"
-  - evm config path /tmp
-  - curl -fsSkL https://raw.github.com/cask/cask/master/go | python
-  - export PATH="$HOME/.cask/bin:$PATH"
-install:
-  - evm install $EVM_EMACS
-  - evm use $EVM_EMACS
-  - cask --verbose --debug
+before_script:
+  - sh .travis-ci/install-evm.sh
+  - evm install $EVM_EMACS --user --skip
+  - sh .travis-ci/install-cask.sh
 script:
   - emacs --version
   - make test EMACS="cask exec emacs"
