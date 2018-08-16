@@ -5,6 +5,7 @@ cache:
     - $HOME/local
 env:
   global:
+    - WORKDIR=$(pwd)
     - PATH=$HOME/local/bin:$HOME/local/evm/bin:$HOME/local/cask/bin:$PATH
   matrix:
     - EVM_EMACS=emacs-24.4-travis
@@ -19,5 +20,6 @@ before_script:
   - evm install $EVM_EMACS --use --skip
   - sh .travis-ci/install-cask.sh
 script:
+  - cd $WORKDIR/uwabami/rail
   - emacs --version
   - make test EMACS="cask exec emacs"
