@@ -2,4 +2,4 @@
 (source melpa)
 
 (package-file "rail")
-(depends-on "flim")
+(depends-on "semi")

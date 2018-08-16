@@ -1,7 +1,7 @@
 #
 # Makefile for rail
 #
-# $Lastupdate: 2013/07/08 16:28:22$
+# $Lastupdate: 2018-08-16 16:09:32$
 #
 
 LISPDIR	= default
@@ -76,6 +76,9 @@ distclean:
 
 maintainer-clean:
 	-rm -f *~ *.elc $(TABLES)
+
+test: rail
+	$(EMACS) -q -no-site-file -batch -L . -l test/run-test.el
 
 cl: git2cl
 git2cl:

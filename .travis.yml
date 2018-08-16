@@ -12,13 +12,11 @@ before_install:
   - export PATH="$HOME/.cask/bin:$PATH"
   - export PATH="$HOME/.evm/bin:$PATH"
   - git clone https://github.com/rejeep/evm.git $HOME/.evm
-  - evm config path /tmp
-  - evm install $EVM_EMACS
+    #  - evm config path /tmp
+    #  - evm install $EVM_EMACS
   - evm use $EVM_EMACS
   - curl -fsSkL https://raw.github.com/cask/cask/master/go | python
   - cask --verbose --debug
 script:
-  - evm use $EVM_EMACS
-  - make EMACS="cask exec emacs"
-  - make clean
-  - make distclean
+  - emacs --version
+  - make test EMACS="cask exec emacs"
