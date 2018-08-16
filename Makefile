@@ -7,7 +7,11 @@
 LISPDIR	= default
 PACKAGEDIR	= default
 
-EMACS	= emacs
+ifeq (, $(shell which cask))
+  EMACS = emacs
+else
+  EMACS = cask exec emacs
+endif
 #EMACS	= mule
 XEMACS	= xemacs
 MANIFEST= contrib/MANIFEST.rail
