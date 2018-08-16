@@ -19,5 +19,6 @@ before_script:
   - sh .travis-ci/install-cask.sh
 script:
   - emacs --version
+  - echo `pwd`
   - cask
   - make test
