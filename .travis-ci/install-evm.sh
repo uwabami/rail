@@ -3,6 +3,8 @@
 # Install evm for Travis CI
 # or if already installed, then check for updates
 
+EVM_EMACS=$1
+
 WORKDIR=${HOME}/local
 EVMDIR=$WORKDIR/evm
 SCRIPTDIR=`dirname $(readlink -f $0)`
@@ -16,5 +18,5 @@ then
 else
     git clone https://github.com/rejeep/evm.git $EVMDIR
     evm config path /tmp
-    travis_retry evm install emacs-24.3-travis --use --skip
+    travis_retry evm install $EVM_EMACS --use --skip
 fi
