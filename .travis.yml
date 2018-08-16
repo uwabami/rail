@@ -20,4 +20,4 @@ before_script:
 script:
   - cask exec emacs --version
   - cask install
-  - make test EMACS="cask exec emacs"
+  - make test
