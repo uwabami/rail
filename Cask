@@ -2,4 +2,7 @@
 (source melpa)
 
 (package-file "rail")
-(depends-on "semi")
+(files "*.el" (:exclude "make.el"))
+
+(development
+  (depends-on "semi"))
