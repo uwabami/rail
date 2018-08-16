@@ -17,6 +17,6 @@ then
     git pull origin master
 else
     git clone https://github.com/rejeep/evm.git $EVMDIR
-    evm config path /tmp
-    travis_retry evm install $EVM_EMACS --use --skip
 fi
+evm config path /tmp
+travis_retry evm install $EVM_EMACS --use --skip
