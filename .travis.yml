@@ -16,7 +16,7 @@ env:
     - EVM_EMACS=emacs-git-snapshot-travis
 before_script:
   - sh .travis-ci/install-evm.sh
-  - evm install $EVM_EMACS --user --skip
+  - evm install $EVM_EMACS --use --skip
   - sh .travis-ci/install-cask.sh
 script:
   - emacs --version
