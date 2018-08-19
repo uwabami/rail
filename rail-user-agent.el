@@ -3,6 +3,7 @@
 ;; Copyright (C) 1999 by Free Software Foundation, Inc.
 
 ;; Author: SHIMADA Mitsunobu <simm-emacs@fan.gr.jp>
+;;         Youhei SASAKI <uwabami@gfd-dennou.org>
 ;; Keywords: User-Agent, MIME-Version, FLIM, SEMI, Rail
 
 ;; This file is free software; you can redistribute it and/or modify
@@ -26,8 +27,9 @@
 
 ;;; Code:
 
-(require 'rail-vars)
 (require 'rail-common)
+(eval-when-compile
+  (require 'mime-edit))
 
 ;; search header
 (defun rail-user-agent-search-header (head)
@@ -80,24 +82,19 @@
                (if (not kind)
                    (skip-chars-forward "^ \t\r\n")
                  (goto-char (match-end 0))
-                 (or (and (eq 'xmas kind)
-                          (looking-at rail-user-agent-header-xmas-format)
-                          (rail-replace-codename-primitive
-                           rail-user-agent-header-xmas-format
-                           rail-additional-xmas-codename-alist rail-xmas-codename-alist))
-                     (let* ((skind (prin1-to-string kind))
-                            (alist-a
-                             (intern (format "rail-additional-%s-codename-alist" skind)))
-                            (alist-b
-                             (intern (format "rail-%s-codename-alist" skind))))
-                       (and (looking-at rail-user-agent-header-format)
-                            (boundp alist-a)
-                            (boundp alist-b)
-                            (rail-replace-codename-primitive
-                             rail-user-agent-header-format
-                             (symbol-value alist-a) (symbol-value alist-b)))))
-                 (and (eq 'meadow kind)
-                      (rail-replace-codename-meadow))))))
+                 (or
+                  (let* ((skind (prin1-to-string kind))
+                         (alist-a
+                          (intern (format "rail-additional-%s-codename-alist" skind)))
+                         (alist-b
+                          (intern (format "rail-%s-codename-alist" skind))))
+                    (and (looking-at rail-user-agent-header-format)
+                         (boundp alist-a)
+                         (boundp alist-b)
+                         (rail-replace-codename-primitive
+                          rail-user-agent-header-format
+                          (symbol-value alist-a) (symbol-value alist-b)))))
+                 ))))
          (buffer-substring (point-min) (point-max)))))
 
 ;; replace header with rail-user-agent-replace-{mime-version|user-agent}-region
@@ -148,7 +145,8 @@
          (aset mime-library-product 2
                (or (rail-assoc
                     codename
-                    (append rail-additional-flim-codename-alist rail-flim-codename-alist)
+                    (append rail-additional-flim-codename-alist
+                            rail-flim-codename-alist)
                     rail-convert-direction)
                    codename))))
   ;; mime-user-interface-product
@@ -159,7 +157,8 @@
          (aset mime-user-interface-product 2
                (or (rail-assoc
                     codename
-                    (append rail-additional-semi-codename-alist rail-semi-codename-alist)
+                    (append rail-additional-semi-codename-alist
+                            rail-semi-codename-alist)
                     rail-convert-direction)
                    codename)))))
 

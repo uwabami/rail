@@ -1,0 +1,107 @@
+* rail*.el ドキュメント
+
+| Authors   | Youhei SASAKI <uwabami@gfd-dennou.org> |
+| Date      | $Lastupdate: 2018-08-19 19:44:26$      |
+| Copyright | 1999-2002 しまだみつのぶ.              |
+|           | 2010-2018 Youhei SASAKI                |
+| License   | [[https://raw.github.com/uwabami/rail/master/GPL-2][GPL-2+]]                                 |
+
+*本バージョンより, Meadow と irchat-pj の support を廃止しました*
+
+* RAIL とは?
+
+RAIL -- Replace Agent-string Internal Library レイルは, 以下の機能を提供しています:
+
+1. tm に含まれる genjis.el 互換機能 (変数 mule-version の日本語化)
+2. FLIM / SEMI のコードネームを 日本語化し, メッセージの User-Agent: フィールドに適用
+
+本バージョンより, Meadow と irchat-pj の support を廃止しました.
+
+* インストール方法
+
+現在 melpa 申請中です. el-get をお使いの方は [[https://raw.github.com/uwabami/rail/master/][rail.rcp]] をお使い下さい.
+
+MULE のコードネームが増えることはさほどないとは思いますが,
+FLIM や SEMI は, 随時コードネームが増加しております.
+より新しいコードネームを正しく変換するためには,
+- [FLIM] FLIM(およびその派生形)のソースにある VERSION をcontrib/FLIM_VERSION にコピー
+- [SEMI] SEMI(およびその派生形)のソースにある VERSION をcontrib/SEMI_VERSION にコピー
+したうえで,
+#+BEGIN_EXAMPLE
+  % make distclean
+  % make
+#+END_EXAMPLE
+してください.
+
+* 使用方法
+
+=~/.emacs= のどこかに
+#+BEGIN_SRC emacs-lisp
+(require 'rail)
+#+END_SRC
+
+と記述しておくだけです. 今まで ISO-8859-4 を使った =User-Agent:=
+フィールドが, 日本語表記に変更されます.
+
+また, rail.el は tm に含まれる =genjis.el= の互換機能も提供します.
+=~/.emacs= の =(require 'rail)= の記述の手前に
+#+BEGIN_SRC emacs-lisp
+(setq rail-emulate-genjis t)
+#+END_SRC
+と書いておくことで, 変数 =mule-version= が日本語化されます.
+なお, =rail-emulate-genjis= が nil であっても
+=User-Agent:= に含まれる Mule の codename は日本語表記になります.
+
+=User-Agent:= はそのままで, genjis 機能だけ利用したい場合は,
+#+BEGIN_SRC emacs-lisp
+    (setq rail-emulate-genjis t
+          rail-user-agent-convert-statically  nil
+          rail-user-agent-convert-dynamically nil)
+#+END_SRC
+とします.
+コンパイル後に FLIM / SEMI のバージョンを増やしたい,
+コードネームを別の表記にしたい場合等は,
+
+- rail-additional-flim-codename-alist (FLIM)
+- rail-additional-semi-codename-alist (SEMI)
+
+を設定してください. 設定方法は, それぞれの additional がつかない変数と同
+じですので, これらが定義されている =rail-table-*.el= を参照ください. な
+お, こちらで記述したものが優先されますので, デフォルトが気にいらない場合
+等, これらの変数を設定してください.
+
+* 意見・要望等
+
+メールで [[mailto:uwabami@gfd-dennou.org][uwabami@gfd-dennou.org]] までお願いします.
+
+
+* 配布・改変について
+
+このプログラムは free software です. GNU General Public License のもとに,
+このプログラムを再配布したり改変したりしてもかまいません.
+#+BEGIN_EXAMPLE
+   This file is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2, or (at your option)
+   any later version.
+
+   This file is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with GNU Emacs; see the file COPYING.  If not, write to
+   the Free Software Foundation, Inc., 51 Franklin Street, Fifth
+   Floor, Boston, MA 02110-1301 USA.
+#+END_EXAMPLE
+
+* HISTORY
+
+本プログラムは 2002 年までしまだみつひろさんによって開発/管理されていま
+した. 過去の開発履歴は[[https://raw.github.com/uwabami/rail/master/old/CHANGELOG][old/CHANGELOG]]にあります. しまださんが開発から手を
+引かれたので, 2010 年から佐々木がひきとって細々と公開しています. 有用な
+プログラムを作成して下さったしまださんへの感謝をここに記しておきます.
+
+本プログラム群は気がついたタイミングで適宜アップデートしていきます.
+ご意見や要望などありましたら, 遠慮なくご連絡下さい.

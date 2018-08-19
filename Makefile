@@ -1,88 +1,60 @@
 #
 # Makefile for rail
 #
-# $Lastupdate: 2018-08-16 16:09:32$
+# $Lastupdate: 2018-08-19 19:39:50$
 #
-
-LISPDIR	= default
-PACKAGEDIR	= default
 
 ifeq (, $(shell which cask))
   EMACS = emacs
 else
   EMACS = cask exec emacs
 endif
-#EMACS	= mule
-XEMACS	= xemacs
 MANIFEST= contrib/MANIFEST.rail
-
 MULEVER	= contrib/MULE_VERSION
-MW32VER	= contrib/MEADOW_VERSION
 FLIMVER	= contrib/FLIM_VERSION contrib/ADD_FLIM_VERSION
 SEMIVER	= contrib/SEMI_VERSION contrib/ADD_SEMI_VERSION
 RAILVER = $(shell grep rail-version rail-vars.el | awk '{print $$3}')
-MAKE	=	make.el
 
-#
-# You shouldn't need to change anything after this point.
-#
+TABLES	?= rail-table-flim.el
+TABLES	+= rail-table-semi.el
+TABLES	+= rail-table-mule.el
+EL		?= $(TABLES)
+EL		+= rail.el
+EL		+= rail-common.el
+EL		+= rail-vars.el
+EL		+= rail-user-agent.el
+ELC		= $(EL:%.el=%.elc)
+ELFLAGS = -q -no-site-file -batch
 
-CAT	= cat
-ECHO	= echo
-TEST	= test
-MKDIR	= mkdir
-INSTALL	= install
-PERL	= perl
-INSTALL_DATA	= $(INSTALL) -m644
+%.elc: %.el
+	$(EMACS) $(ELFLAGS) -L . -f batch-byte-compile $<
 
-LISPS	= rail.el rail-user-agent.el
-MTABLES	= rail-table-flim.el rail-table-semi.el
-TABLES	= rail-table-mule.el rail-table-meadow.el $(MTABLES)
-
-all: rail
-install: install-rail
+all: $(ELC)
 
 # rail
-rail: table
-	$(EMACS) -q -no-site-file -batch -l ./$(MAKE) -f compile-rail
-
-install-rail: rail
-	$(EMACS) -q -no-site-file -batch -l ./$(MAKE) -f install-rail $(LISPDIR)
-
-# rail-*-table rebuild
-table: $(TABLES)
+rail.el: $(TABLES)
 
 rail-table-mule.el: $(MULEVER)
-	$(EMACS) -batch -q -no-site-file -l ./rail-make-table.el -f rail-make-table-mule
-
-rail-table-meadow.el: $(MW32VER)
-	$(EMACS) -batch -q -no-site-file -l ./rail-make-table.el -f rail-make-table-meadow
+	$(EMACS) $(ELFLAGS) -l ./contrib/rail-make-table.el -f rail-make-table-mule
 
 rail-table-flim.el: $(FLIMVER)
-	$(EMACS) -batch -q -no-site-file -l ./rail-make-table.el -f rail-make-table-flim
+	$(EMACS) $(ELFLAGS) -l ./contrib/rail-make-table.el -f rail-make-table-flim
 
 rail-table-semi.el: $(SEMIVER)
-	$(EMACS) -batch -q -no-site-file -l ./rail-make-table.el -f rail-make-table-semi
-
-# for XEmacs21 package
-package: $(TABLES)
-	$(XEMACS) -q -no-site-file -batch -l ./$(MAKE) -f compile-rail
-
-install-package: package
-	$(XEMACS) -q -no-site-file -batch -l ./$(MAKE) -f install-package $(PACKAGEDIR)
+	$(EMACS) $(ELFLAGS) -l ./contrib/rail-make-table.el -f rail-make-table-semi
 
 # clean up
 clean:
-	-rm -f *~ *.elc
+	-rm -f $(ELC)
 
-distclean:
-	-rm -f *~ *.elc $(MTABLES)
+distclean: maintainer-clean
 
 maintainer-clean:
-	-rm -f *~ *.elc $(TABLES)
+	-rm -f *~ $(ELC) $(TABLES)
 
-test: rail
-	$(EMACS) -q -no-site-file -batch -L . -l test/run-test.el
+test: run-test
+run-test: $(ELC)
+	$(EMACS) $(ELFLAGS) -L . -l test/run-test.el
 
 cl: git2cl
 git2cl:
@@ -93,6 +65,6 @@ git2cl:
 	sed ':loop; N; $$!b loop; s/\n\n\n/\n\n/g' \
 	> ChangeLog
 # create tar.gz
-tar:
+release:
 	@git archive --format=tar --prefix=rail-$(RAILVER)/ HEAD \
 	  | gzip -9 > ../rail-$(RAILVER).tar.gz

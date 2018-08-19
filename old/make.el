@@ -1,14 +1,14 @@
 (defvar rail-install-list
   '("rail-common.el"
     "rail-user-agent.el"
-    "rail-mime-example-1-13.el"
-    "rail-mime-example-1-14.el"
+;;    "rail-mime-example-1-13.el"
+;;    "rail-mime-example-1-14.el"
     "rail-mime-example.el"
-    ("rail-mule.el" . (and (not (featurep 'xemacs)) (featurep 'mule)))
-    ("rail-xmas.el" . (featurep 'xemacs))
+    "rail-mule.el" 
+;;    ("rail-xmas.el" . (featurep 'xemacs))
     "rail-table-mule.el"
-    "rail-table-meadow.el"
-    "rail-table-xmas.el"
+;;    "rail-table-meadow.el"
+;;    "rail-table-xmas.el"
     "rail-table-utf2000.el"
     "rail-table-flim.el"
     "rail-table-semi.el"

@@ -40,5 +40,4 @@
    (string-equal (mime-product-code-name mime-library-product)
                  "五条")))
 
-
 (provide 'rail-test)
