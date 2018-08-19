@@ -47,7 +47,7 @@ rail-table-semi.el: $(SEMIVER)
 clean:
 	-rm -f $(ELC)
 
-distclean: maintainer-clean
+distclean: clean
 
 maintainer-clean:
 	-rm -f *~ $(ELC) $(TABLES)
