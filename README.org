@@ -19,7 +19,7 @@ RAIL -- Replace Agent-string Internal Library レイルは, 以下の機能を�
 
 * インストール方法
 
-現在 melpa 申請中です. el-get をお使いの方は [[https://raw.github.com/uwabami/rail/master/][rail.rcp]] をお使い下さい.
+melpa 申請準備中です. el-get をお使いの方は [[https://raw.github.com/uwabami/rail/master/][rail.rcp]] をお使い下さい.
 
 MULE のコードネームが増えることはさほどないとは思いますが,
 FLIM や SEMI は, 随時コードネームが増加しております.
