@@ -1,3 +1,180 @@
+2020-10-26  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Bump Version: 1.2.13
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2020-10-26  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Update Changelog
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2020-10-26  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Update travis settings again
+
+2020-10-26  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Update EVM and Travis CI settings
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2020-10-26  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Update travis settings
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2020-10-26  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Merge pull request #4 from tats/feature/flim-lb
+	Support FLIM-LB, thanks!!
+
+2020-08-27  Tatsuya Kinoshita  <tats@vega.ocn.ne.jp>
+
+	* Support FLIM-LB
+
+2018-08-20  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Fix documents
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-20  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Add table-*.el for melpa
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-19  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Drop XEmacs, Meadow, UTF2000, irchat-pj support
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Fix travis script
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Update make test target
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Fix test execution
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Fix Cask
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Check cask error
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Update
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Check repository location
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Fix cask opts again
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Fix cask opts
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Handling cacher
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Update Cask settings
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Update .travis-ci/*.sh
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Add travis location fix
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Fix evm option
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Update travis settings, create .travis-ci/*.sh
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Update .travis settings
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Update travis.yml
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Add unit tests
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-15  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Revert last changes
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-15  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Drop XEmacs, Meadow, irchat-pj
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2018-08-14  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Fix some warning
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2017-01-11  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Update travis settings, use cask and evm!
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2017-01-11  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Update travis settings, use cask and evm
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2015-03-27  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Update travis settings
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2015-03-27  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Cosmetic
+
+2015-03-27  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Add travis settings
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
 2013-08-16  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
 	* Bump version: 1.2.11
