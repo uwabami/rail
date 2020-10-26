@@ -46,6 +46,7 @@
     ("EMIKO"         . semi)
     ("WEMIKO"        . semi)
     ("FLIM"          . flim)
+    ("FLIM-LB"       . flim)
     ("CLIME"         . flim)
     ("CHAO"          . flim)
     ("LIMIT"         . flim)
