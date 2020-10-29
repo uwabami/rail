@@ -1,11 +1,16 @@
-2020-10-26  Youhei SASAKI  <uwabami@gfd-dennou.org>
+2020-10-29  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	* Bump Version: 1.2.13
+	* Bump version: 1.2.14
 	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
 
 2020-10-26  Youhei SASAKI  <uwabami@gfd-dennou.org>
 
-	* Update Changelog
+	* Drop generated files
+	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+
+2020-10-26  Youhei SASAKI  <uwabami@gfd-dennou.org>
+
+	* Bump Version: 1.2.13
 	Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
 
 2020-10-26  Youhei SASAKI  <uwabami@gfd-dennou.org>

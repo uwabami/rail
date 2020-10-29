@@ -30,7 +30,7 @@
 (require 'rail-table-flim)
 (require 'rail-table-mule)
 
-(defvar rail-version "1.2.13"
+(defvar rail-version "1.2.14"
   "Version number of rail.el")
 
 (defvar rail-temporary-buffer-name " *Rail*"

@@ -4,7 +4,7 @@
 
 ;; Author: SHIMADA Mitsunobu <simm-emacs@fan.gr.jp>
 ;;         Youhei SASAKI <uwabami@gfd-dennou.org>
-;; Version: 1.2.12
+;; Version: 1.2.14
 ;; Package-Requires: ((emacs "25")(semi "14"))
 ;; Keywords: MULE, Genji, FLIM, SEMI, Rail
 ;; URL: https://github.com/uwabami/rail
