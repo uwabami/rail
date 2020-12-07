@@ -26,7 +26,7 @@ jobs:
       - uses: purcell/setup-emacs@master
         with:
           version: ${{ matrix.emacs_version }}
-      - uses: conao3/setup-caskg@master
+      - uses: conao3/setup-cask@master
       - run: sudo apt install cmigemo
       - name: Run test
         run: make test
