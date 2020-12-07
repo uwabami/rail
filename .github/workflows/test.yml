@@ -19,7 +19,8 @@ jobs:
           - 'snapshot'
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/setup-python@v1.1.1
+      - name: Setup Python
+        uses: actions/setup-python@v2
         with:
           python-version: '3.6'
           architecture: 'x64'
@@ -27,6 +28,5 @@ jobs:
         with:
           version: ${{ matrix.emacs_version }}
       - uses: conao3/setup-cask@master
-      - run: sudo apt install cmigemo
       - name: Run test
         run: make test
