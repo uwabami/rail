@@ -1,5 +1,7 @@
 * rail*.el ドキュメント
 
+  [[https://github.com/uwabami/emacs/workflows/test/badge.svg]]
+
 | Authors   | Youhei SASAKI <uwabami@gfd-dennou.org> |
 | Date      | $Lastupdate: 2018-08-19 19:44:26$      |
 | Copyright | 1999-2002 しまだみつのぶ.              |
@@ -73,7 +75,6 @@ FLIM や SEMI は, 随時コードネームが増加しております.
 * 意見・要望等
 
 メールで [[mailto:uwabami@gfd-dennou.org][uwabami@gfd-dennou.org]] までお願いします.
-
 
 * 配布・改変について
 
