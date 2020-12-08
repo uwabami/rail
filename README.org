@@ -1,6 +1,6 @@
 * rail*.el ドキュメント
 
-  [[https://github.com/uwabami/emacs/workflows/test/badge.svg]]
+  [[https://github.com/uwabami/rail/workflows/test/badge.svg]]
 
 | Authors   | Youhei SASAKI <uwabami@gfd-dennou.org> |
 | Date      | $Lastupdate: 2018-08-19 19:44:26$      |
