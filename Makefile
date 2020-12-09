@@ -1,13 +1,13 @@
 #
 # Makefile for rail
 #
-# $Lastupdate: 2018-08-19 19:39:50$
+# $Lastupdate: 22020-12-09 11:13:37$
 #
 
-ifeq (, $(shell which cask))
+ifeq (, $(shell which keg))
   EMACS = emacs
 else
-  EMACS = cask exec emacs
+  EMACS = keg emacs
 endif
 MANIFEST= contrib/MANIFEST.rail
 MULEVER	= contrib/MULE_VERSION
