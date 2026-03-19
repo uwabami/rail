@@ -1,19 +1,14 @@
 #
 # Makefile for rail
 #
-# $Lastupdate: 22020-12-09 11:13:37$
+# $Lastupdate: 2026-03-20 06:52:15$
 #
-
-ifeq (, $(shell which keg))
-  EMACS = emacs
-else
-  EMACS = keg emacs
-endif
-MANIFEST= contrib/MANIFEST.rail
+EMACS		= emacs
+MANIFEST	= contrib/MANIFEST.rail
 MULEVER	= contrib/MULE_VERSION
 FLIMVER	= contrib/FLIM_VERSION contrib/ADD_FLIM_VERSION
 SEMIVER	= contrib/SEMI_VERSION contrib/ADD_SEMI_VERSION
-RAILVER = $(shell grep rail-version rail-vars.el | awk '{print $$3}')
+RAILVER	= $(shell grep rail-version rail-vars.el | awk '{print $$3}')
 
 TABLES	?= rail-table-flim.el
 TABLES	+= rail-table-semi.el
@@ -24,7 +19,7 @@ EL		+= rail-common.el
 EL		+= rail-vars.el
 EL		+= rail-user-agent.el
 ELC		= $(EL:%.el=%.elc)
-ELFLAGS = -q -no-site-file -batch
+ELFLAGS = -q -no-site-file -batch -l test/test-helper.el
 
 %.elc: %.el
 	$(EMACS) $(ELFLAGS) -L . -f batch-byte-compile $<
@@ -50,7 +45,7 @@ clean:
 distclean: clean
 
 maintainer-clean:
-	-rm -f *~ $(ELC) $(TABLES)
+	-rm -rf *~ $(ELC) $(TABLES) .test-elpa
 
 test: run-test
 run-test: $(ELC)
