@@ -1,8 +1,0 @@
-pkginfo/MANIFEST.rail
-lisp/rail/rail-common.elc
-lisp/rail/rail-table-flim.elc
-lisp/rail/rail-table-mule.elc
-lisp/rail/rail-table-semi.elc
-lisp/rail/rail-user-agent.elc
-lisp/rail/rail-vars.elc
-lisp/rail/rail.elc
