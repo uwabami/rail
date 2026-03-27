@@ -40,12 +40,13 @@ rail-table-semi.el: $(SEMIVER)
 
 # clean up
 clean:
-	-rm -f $(ELC)
+	-rm -f $(ELC) *~
 
 distclean: clean
+	-rm -f $(TABLES)
 
-maintainer-clean:
-	-rm -rf *~ $(ELC) $(TABLES) .test-elpa
+maintainer-clean: distclean
+	-rm -rf .test-elpa
 
 test: run-test
 run-test: $(ELC)
